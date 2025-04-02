@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\unrealeditor\\inc\\wavesurvival\\uht\\waveinteractioncomponent.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\x64\\wavesurvivaleditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\wavesurvival\\definitions.wavesurvival.h",
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\source\\wavesurvival\\player\\waveinteractioncomponent.h",
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\unrealeditor\\inc\\wavesurvival\\uht\\waveinteractioncomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

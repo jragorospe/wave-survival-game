@@ -1,0 +1,37 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/TestLevel.umap",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Maps/TestLevel.umap",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Core/BP_GameMode.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Core/BP_PlayerCharacter.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Input/IA_SecondaryAttack.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Input/IMC_PlayerDefault.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Input/IA_Dash.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Input/IA_Interact.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Input/IA_Jump.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Input/IA_LookMouse.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Input/IA_Move.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Input/IA_PrimaryAttack.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Input/IA_Sprint.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Actions/BP_Action_Sprint.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Actions/BP_Action_MagicProjectile.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Projectiles/BP_Proj_MagicProjectile.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Audio/MagicProjectile_Loop.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Audio/ATT_Projectiles.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/ParagonGideon/Characters/Heroes/Gideon/Gideon_AnimBlueprint.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Animation/Sprinting_BS_1D.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/ExampleContent/Audio/Abilities/A_Ability_FireBallCast01.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/ExampleContent/Audio/Abilities/A_Ability_FireBallCast02.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/VFX/N_HitScan_Projectile_EM.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Materials/M_ParticleBase.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Materials/MI_ParticleProjectile.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/VFX/NS_HitScan_ProjectileTrail.uasset"
+			]
+		}
+	]
+}

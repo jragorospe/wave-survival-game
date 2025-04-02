@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\WaveSurvival.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\WaveSurvival.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\WaveSurvivalEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\WaveSurvival">
+      <UniqueIdentifier>{C8D8425D-E225-3771-AA18-13B9580BC52A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WaveSurvival\SharedGameplayTags.cpp">
+      <Filter>Source\WaveSurvival</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\SharedGameplayTags.h">
+      <Filter>Source\WaveSurvival</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\WaveSurvival\WaveSurvival.Build.cs">
+      <Filter>Source\WaveSurvival</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\WaveSurvival\WaveSurvival.cpp">
+      <Filter>Source\WaveSurvival</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\WaveSurvival.h">
+      <Filter>Source\WaveSurvival</Filter>
+    </ClInclude>
+    <Filter Include="Source\WaveSurvival\ActionSystem">
+      <UniqueIdentifier>{22BABAAB-347A-34C2-AD7F-65D804AC5B71}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveAction.cpp">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveAction.h">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveActionComponent.cpp">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveActionComponent.h">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveActionEffect.cpp">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveActionEffect.h">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveAction_HitscanAttack.cpp">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveAction_HitscanAttack.h">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveAction_ProjectileAttack.cpp">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveAction_ProjectileAttack.h">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveAttributeComponent.cpp">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveAttributeComponent.h">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClInclude>
+    <Filter Include="Source\WaveSurvival\Animation">
+      <UniqueIdentifier>{16141BF3-937A-36FF-AF2F-5E13B5A5B161}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WaveSurvival\Animation\WaveAnimInstance.cpp">
+      <Filter>Source\WaveSurvival\Animation</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Animation\WaveAnimInstance.h">
+      <Filter>Source\WaveSurvival\Animation</Filter>
+    </ClInclude>
+    <Filter Include="Source\WaveSurvival\Core">
+      <UniqueIdentifier>{91CB6A47-AA43-3B65-ACE1-09D61E417109}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WaveSurvival\Core\WaveGameModeBase.cpp">
+      <Filter>Source\WaveSurvival\Core</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Core\WaveGameModeBase.h">
+      <Filter>Source\WaveSurvival\Core</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\Core\WaveGameplayFunctionLibrary.cpp">
+      <Filter>Source\WaveSurvival\Core</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Core\WaveGameplayFunctionLibrary.h">
+      <Filter>Source\WaveSurvival\Core</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\Core\WaveGameplayInterface.cpp">
+      <Filter>Source\WaveSurvival\Core</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Core\WaveGameplayInterface.h">
+      <Filter>Source\WaveSurvival\Core</Filter>
+    </ClInclude>
+    <Filter Include="Source\WaveSurvival\Player">
+      <UniqueIdentifier>{D5B1E061-0C3E-39FD-9E02-E8627041CE88}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WaveSurvival\Player\WaveInteractionComponent.cpp">
+      <Filter>Source\WaveSurvival\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Player\WaveInteractionComponent.h">
+      <Filter>Source\WaveSurvival\Player</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\Player\WavePlayerCharacter.cpp">
+      <Filter>Source\WaveSurvival\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Player\WavePlayerCharacter.h">
+      <Filter>Source\WaveSurvival\Player</Filter>
+    </ClInclude>
+    <Filter Include="Source\WaveSurvival\Projectiles">
+      <UniqueIdentifier>{895FB764-F0A2-3812-BB74-20178FAF827C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WaveSurvival\Projectiles\WaveProjectile.cpp">
+      <Filter>Source\WaveSurvival\Projectiles</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Projectiles\WaveProjectile.h">
+      <Filter>Source\WaveSurvival\Projectiles</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\Projectiles\WaveProjectile_Magic.cpp">
+      <Filter>Source\WaveSurvival\Projectiles</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Projectiles\WaveProjectile_Magic.h">
+      <Filter>Source\WaveSurvival\Projectiles</Filter>
+    </ClInclude>
+    <Filter Include="Source\WaveSurvival\UI">
+      <UniqueIdentifier>{1E76EDBD-9740-3EFE-B502-EA17443DB7A9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WaveSurvival\UI\WaveWorldUserWidget.cpp">
+      <Filter>Source\WaveSurvival\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\UI\WaveWorldUserWidget.h">
+      <Filter>Source\WaveSurvival\UI</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

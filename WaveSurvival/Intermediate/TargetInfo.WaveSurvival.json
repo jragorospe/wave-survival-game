@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "WaveSurvival",
+			"Path": "..\\Source\\WaveSurvival.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "WaveSurvivalEditor",
+			"Path": "..\\Source\\WaveSurvivalEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
