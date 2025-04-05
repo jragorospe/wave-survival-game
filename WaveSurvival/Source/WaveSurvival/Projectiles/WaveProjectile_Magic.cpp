@@ -3,17 +3,18 @@
 
 #include "WaveProjectile_Magic.h"
 #include "Components/SphereComponent.h"
-#include "GameFramework/ProjectileMovementComponent.h"
 #include "WaveSurvival/ActionSystem/WaveActionComponent.h"
-#include "WaveSurvival/ActionSystem/WaveActionEffect.h"
 #include "WaveSurvival/Core/WaveGameplayFunctionLibrary.h"
 
 
 AWaveProjectile_Magic::AWaveProjectile_Magic()
 {
 	SphereComp->SetSphereRadius(20.0f);
+	
 	InitialLifeSpan = 10.0f;
 	DamageAmount = 50.0f;
+
+	DamagedActor = nullptr;
 }
 
 void AWaveProjectile_Magic::PostInitializeComponents()
@@ -31,16 +32,10 @@ void AWaveProjectile_Magic::OnActorOverlap(UPrimitiveComponent* OverlappedCompon
 	}
 
 	UWaveActionComponent* const OtherActionComp = OtherActor->FindComponentByClass<UWaveActionComponent>();
-	if (OtherActionComp && OtherActionComp->ActiveGameplayTags.HasTag(ParryTag))
-	{
-		MoveComp->Velocity = -MoveComp->Velocity;
-
-		SetInstigator(Cast<APawn>(OtherActor));
-		return;
-	}
-
 	if (UWaveGameplayFunctionLibrary::ApplyDirectionalDamage(GetInstigator(), OtherActor, DamageAmount, SweepResult))
 	{
+		DamagedActor = OtherActor;
+		
 		Explode();
 
 		if (OtherActionComp && HasAuthority())

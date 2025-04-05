@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameplayTagContainer.h"
 #include "WaveProjectile.h"
 #include "WaveProjectile_Magic.generated.h"
 
@@ -24,10 +23,10 @@ protected:
 	float DamageAmount;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
-	FGameplayTag ParryTag;
-
-	UPROPERTY(EditDefaultsOnly, Category = "Damage")
 	TSubclassOf<UWaveActionEffect> BurningEffectClass;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Damage")
+	TObjectPtr<AActor> DamagedActor;
 	
 	UFUNCTION()
 	void OnActorOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);

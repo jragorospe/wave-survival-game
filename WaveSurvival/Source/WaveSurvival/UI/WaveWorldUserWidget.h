@@ -27,7 +27,7 @@ protected:
 	bool bWasOnScreen = true;
 
 public:
-	UFUNCTION(BlueprintCallable, Category= UI)
+	UFUNCTION(BlueprintCallable, Category = "UI")
 	static void AddToRootCanvasPanel(UUserWidget* InNewWidget);
 	
 	UPROPERTY(EditAnywhere, Category = "UI")

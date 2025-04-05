@@ -7,7 +7,6 @@
 #include "UObject/GeneratedCppIncludes.h"
 #include "WaveSurvival/Projectiles/WaveProjectile_Magic.h"
 #include "Runtime/Engine/Classes/Engine/HitResult.h"
-#include "Runtime/GameplayTags/Classes/GameplayTagContainer.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWaveProjectile_Magic() {}
 
@@ -16,7 +15,6 @@ COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
-GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 UPackage* Z_Construct_UPackage__Script_WaveSurvival();
 WAVESURVIVAL_API UClass* Z_Construct_UClass_AWaveProjectile();
 WAVESURVIVAL_API UClass* Z_Construct_UClass_AWaveProjectile_Magic();
@@ -135,18 +133,18 @@ struct Z_Construct_UClass_AWaveProjectile_Magic_Statics
 		{ "Category", "Damage" },
 		{ "ModuleRelativePath", "Projectiles/WaveProjectile_Magic.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ParryTag_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BurningEffectClass_MetaData[] = {
 		{ "Category", "Damage" },
 		{ "ModuleRelativePath", "Projectiles/WaveProjectile_Magic.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BurningEffectClass_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DamagedActor_MetaData[] = {
 		{ "Category", "Damage" },
 		{ "ModuleRelativePath", "Projectiles/WaveProjectile_Magic.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageAmount;
-	static const UECodeGen_Private::FStructPropertyParams NewProp_ParryTag;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_BurningEffectClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DamagedActor;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -159,12 +157,12 @@ struct Z_Construct_UClass_AWaveProjectile_Magic_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWaveProjectile_Magic_Statics::NewProp_DamageAmount = { "DamageAmount", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaveProjectile_Magic, DamageAmount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamageAmount_MetaData), NewProp_DamageAmount_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AWaveProjectile_Magic_Statics::NewProp_ParryTag = { "ParryTag", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaveProjectile_Magic, ParryTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ParryTag_MetaData), NewProp_ParryTag_MetaData) }; // 1298103297
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AWaveProjectile_Magic_Statics::NewProp_BurningEffectClass = { "BurningEffectClass", nullptr, (EPropertyFlags)0x0024080000010001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaveProjectile_Magic, BurningEffectClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UWaveActionEffect_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BurningEffectClass_MetaData), NewProp_BurningEffectClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWaveProjectile_Magic_Statics::NewProp_DamagedActor = { "DamagedActor", nullptr, (EPropertyFlags)0x0124080000010015, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaveProjectile_Magic, DamagedActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamagedActor_MetaData), NewProp_DamagedActor_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWaveProjectile_Magic_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaveProjectile_Magic_Statics::NewProp_DamageAmount,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaveProjectile_Magic_Statics::NewProp_ParryTag,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaveProjectile_Magic_Statics::NewProp_BurningEffectClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaveProjectile_Magic_Statics::NewProp_DamagedActor,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AWaveProjectile_Magic_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AWaveProjectile_Magic_Statics::DependentSingletons[])() = {
@@ -207,10 +205,10 @@ AWaveProjectile_Magic::~AWaveProjectile_Magic() {}
 struct Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Projectiles_WaveProjectile_Magic_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWaveProjectile_Magic, AWaveProjectile_Magic::StaticClass, TEXT("AWaveProjectile_Magic"), &Z_Registration_Info_UClass_AWaveProjectile_Magic, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWaveProjectile_Magic), 3183353907U) },
+		{ Z_Construct_UClass_AWaveProjectile_Magic, AWaveProjectile_Magic::StaticClass, TEXT("AWaveProjectile_Magic"), &Z_Registration_Info_UClass_AWaveProjectile_Magic, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWaveProjectile_Magic), 994056341U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Projectiles_WaveProjectile_Magic_h_2680409312(TEXT("/Script/WaveSurvival"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Projectiles_WaveProjectile_Magic_h_206104814(TEXT("/Script/WaveSurvival"),
 	Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Projectiles_WaveProjectile_Magic_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Projectiles_WaveProjectile_Magic_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
