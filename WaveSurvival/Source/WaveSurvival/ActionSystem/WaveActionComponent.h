@@ -42,7 +42,7 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Actions")
 	TArray<TSubclassOf<UWaveAction>> DefaultActions;
 
-	UPROPERTY(Transient, BlueprintReadOnly, Replicated)
+	UPROPERTY(BlueprintReadOnly, Replicated)
 	TArray<TObjectPtr<UWaveAction>> Actions;
 
 	UFUNCTION(Server, Reliable)

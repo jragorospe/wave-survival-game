@@ -5,8 +5,11 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "InputAction.h"
+#include "NiagaraCommon.h"
+#include "WaveSurvival/ActionSystem/WaveAction_HitScanAttack.h"
 #include "WavePlayerCharacter.generated.h"
 
+class UWaveAction;
 class UInputMappingContext;
 class UCameraComponent;
 class USpringArmComponent;
@@ -52,6 +55,9 @@ protected:
 	
 	UPROPERTY(EditDefaultsOnly, Category="Input")
 	TObjectPtr<UInputAction> Input_SecondaryAttack;
+
+	UPROPERTY(EditDefaultsOnly, Category="Input")
+	TObjectPtr<UInputAction> Input_UltimateAttack;
 	
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	TObjectPtr<USpringArmComponent> SpringArmComp;
@@ -87,6 +93,8 @@ protected:
 	
 	void SecondaryAttack();
 
+	void UltimateAttack();
+
 	void Dash();
 	
 	void PrimaryInteract();
@@ -98,4 +106,7 @@ protected:
 	
 public:	
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	UFUNCTION(NetMulticast, Unreliable)
+	void SpawnHitScanEffects(UWaveAction_HitScanAttack* InAction, const FHitScanData& InHitScanData);
 };

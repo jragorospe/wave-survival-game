@@ -1,10 +1,10 @@
-"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Source\WaveSurvival\ActionSystem\WaveAction_HitscanAttack.cpp"
+"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Source\WaveSurvival\ActionSystem\WaveAction_HitScanAttack.cpp"
 /FI"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\WaveSurvivalEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
 /FI"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\Definitions.WaveSurvival.h"
 /Yu"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\WaveSurvivalEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
 /Fp"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\WaveSurvivalEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveAction_HitscanAttack.cpp.obj"
-/sourceDependencies "C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveAction_HitscanAttack.cpp.dep.json"
+/Fo"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveAction_HitScanAttack.cpp.obj"
+/sourceDependencies "C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveAction_HitScanAttack.cpp.dep.json"
 @"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveSurvival.Shared.rsp"
 /Zc:inline
 /nologo

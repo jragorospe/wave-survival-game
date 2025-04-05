@@ -12,6 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\WaveSurvival.sln.DotSettings.user" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -66,10 +67,16 @@
     <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveActionEffect.h">
       <Filter>Source\WaveSurvival\ActionSystem</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveAction_HitscanAttack.cpp">
+    <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveActionEffect_Burning.cpp">
       <Filter>Source\WaveSurvival\ActionSystem</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveAction_HitscanAttack.h">
+    <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveActionEffect_Burning.h">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveAction_HitScanAttack.cpp">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveAction_HitScanAttack.h">
       <Filter>Source\WaveSurvival\ActionSystem</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveAction_ProjectileAttack.cpp">
@@ -136,6 +143,18 @@
       <Filter>Source\WaveSurvival\Projectiles</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\WaveSurvival\Projectiles\WaveProjectile.h">
+      <Filter>Source\WaveSurvival\Projectiles</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\Projectiles\WaveProjectile_BlackHole.cpp">
+      <Filter>Source\WaveSurvival\Projectiles</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Projectiles\WaveProjectile_BlackHole.h">
+      <Filter>Source\WaveSurvival\Projectiles</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\Projectiles\WaveProjectile_Dash.cpp">
+      <Filter>Source\WaveSurvival\Projectiles</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Projectiles\WaveProjectile_Dash.h">
       <Filter>Source\WaveSurvival\Projectiles</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\WaveSurvival\Projectiles\WaveProjectile_Magic.cpp">

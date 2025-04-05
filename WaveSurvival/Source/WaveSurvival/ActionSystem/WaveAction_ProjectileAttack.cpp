@@ -9,7 +9,7 @@
 
 UWaveAction_ProjectileAttack::UWaveAction_ProjectileAttack()
 {
-	HandSocketName = "Muzzle_01";
+	HandSocketName = "hand_lSocket";
 	AttackAnimDelay = 0.2f;
 	
 	SweepRadius = 20.0f;
@@ -40,12 +40,6 @@ void UWaveAction_ProjectileAttack::StartAction_Implementation(AActor* Instigator
 
 		GetWorld()->GetTimerManager().SetTimer(TimerHandle_AttackDelay, Delegate, AttackAnimDelay, false);
 	}
-	
-	FTimerHandle TimerHandle_AttackDelay;
-	FTimerDelegate Delegate;
-	Delegate.BindUFunction(this, "AttackDelay_Elapsed", Character);
-
-	GetWorld()->GetTimerManager().SetTimer(TimerHandle_AttackDelay, Delegate, AttackAnimDelay, false);
 }
 
 void UWaveAction_ProjectileAttack::AttackDelay_Elapsed(AWavePlayerCharacter* InstigatorCharacter)

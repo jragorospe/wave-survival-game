@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "WaveSurvival/Player/WavePlayerCharacter.h"
+#include "WaveSurvival/ActionSystem/WaveAction_HitScanAttack.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWavePlayerCharacter() {}
 
@@ -20,9 +21,11 @@ ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
 UPackage* Z_Construct_UPackage__Script_WaveSurvival();
 WAVESURVIVAL_API UClass* Z_Construct_UClass_AWavePlayerCharacter();
 WAVESURVIVAL_API UClass* Z_Construct_UClass_AWavePlayerCharacter_NoRegister();
+WAVESURVIVAL_API UClass* Z_Construct_UClass_UWaveAction_HitScanAttack_NoRegister();
 WAVESURVIVAL_API UClass* Z_Construct_UClass_UWaveActionComponent_NoRegister();
 WAVESURVIVAL_API UClass* Z_Construct_UClass_UWaveAttributeComponent_NoRegister();
 WAVESURVIVAL_API UClass* Z_Construct_UClass_UWaveInteractionComponent_NoRegister();
+WAVESURVIVAL_API UScriptStruct* Z_Construct_UScriptStruct_FHitScanData();
 // End Cross Module References
 
 // Begin Class AWavePlayerCharacter Function OnHealthAttributeChanged
@@ -85,12 +88,71 @@ DEFINE_FUNCTION(AWavePlayerCharacter::execOnHealthAttributeChanged)
 }
 // End Class AWavePlayerCharacter Function OnHealthAttributeChanged
 
+// Begin Class AWavePlayerCharacter Function SpawnHitScanEffects
+struct WavePlayerCharacter_eventSpawnHitScanEffects_Parms
+{
+	UWaveAction_HitScanAttack* InAction;
+	FHitScanData InHitScanData;
+};
+static FName NAME_AWavePlayerCharacter_SpawnHitScanEffects = FName(TEXT("SpawnHitScanEffects"));
+void AWavePlayerCharacter::SpawnHitScanEffects(UWaveAction_HitScanAttack* InAction, FHitScanData const& InHitScanData)
+{
+	WavePlayerCharacter_eventSpawnHitScanEffects_Parms Parms;
+	Parms.InAction=InAction;
+	Parms.InHitScanData=InHitScanData;
+	ProcessEvent(FindFunctionChecked(NAME_AWavePlayerCharacter_SpawnHitScanEffects),&Parms);
+}
+struct Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Player/WavePlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InHitScanData_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_InAction;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_InHitScanData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects_Statics::NewProp_InAction = { "InAction", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WavePlayerCharacter_eventSpawnHitScanEffects_Parms, InAction), Z_Construct_UClass_UWaveAction_HitScanAttack_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects_Statics::NewProp_InHitScanData = { "InHitScanData", nullptr, (EPropertyFlags)0x0010000008000082, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WavePlayerCharacter_eventSpawnHitScanEffects_Parms, InHitScanData), Z_Construct_UScriptStruct_FHitScanData, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InHitScanData_MetaData), NewProp_InHitScanData_MetaData) }; // 1635251743
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects_Statics::NewProp_InAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects_Statics::NewProp_InHitScanData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AWavePlayerCharacter, nullptr, "SpawnHitScanEffects", nullptr, nullptr, Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects_Statics::PropPointers), sizeof(WavePlayerCharacter_eventSpawnHitScanEffects_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00024C40, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects_Statics::Function_MetaDataParams), Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects_Statics::Function_MetaDataParams) };
+static_assert(sizeof(WavePlayerCharacter_eventSpawnHitScanEffects_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AWavePlayerCharacter::execSpawnHitScanEffects)
+{
+	P_GET_OBJECT(UWaveAction_HitScanAttack,Z_Param_InAction);
+	P_GET_STRUCT(FHitScanData,Z_Param_InHitScanData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SpawnHitScanEffects_Implementation(Z_Param_InAction,Z_Param_InHitScanData);
+	P_NATIVE_END;
+}
+// End Class AWavePlayerCharacter Function SpawnHitScanEffects
+
 // Begin Class AWavePlayerCharacter
 void AWavePlayerCharacter::StaticRegisterNativesAWavePlayerCharacter()
 {
 	UClass* Class = AWavePlayerCharacter::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "OnHealthAttributeChanged", &AWavePlayerCharacter::execOnHealthAttributeChanged },
+		{ "SpawnHitScanEffects", &AWavePlayerCharacter::execSpawnHitScanEffects },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -143,6 +205,10 @@ struct Z_Construct_UClass_AWavePlayerCharacter_Statics
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Player/WavePlayerCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Input_UltimateAttack_MetaData[] = {
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "Player/WavePlayerCharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SpringArmComp_MetaData[] = {
 		{ "Category", "Components" },
 		{ "EditInline", "true" },
@@ -189,6 +255,7 @@ struct Z_Construct_UClass_AWavePlayerCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Input_Dash;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Input_PrimaryAttack;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Input_SecondaryAttack;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Input_UltimateAttack;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SpringArmComp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraComp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InteractionComp;
@@ -199,6 +266,7 @@ struct Z_Construct_UClass_AWavePlayerCharacter_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_AWavePlayerCharacter_OnHealthAttributeChanged, "OnHealthAttributeChanged" }, // 4201260279
+		{ &Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects, "SpawnHitScanEffects" }, // 2443190589
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -215,6 +283,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCha
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_Input_Dash = { "Input_Dash", nullptr, (EPropertyFlags)0x0124080000010001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, Input_Dash), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Input_Dash_MetaData), NewProp_Input_Dash_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_Input_PrimaryAttack = { "Input_PrimaryAttack", nullptr, (EPropertyFlags)0x0124080000010001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, Input_PrimaryAttack), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Input_PrimaryAttack_MetaData), NewProp_Input_PrimaryAttack_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_Input_SecondaryAttack = { "Input_SecondaryAttack", nullptr, (EPropertyFlags)0x0124080000010001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, Input_SecondaryAttack), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Input_SecondaryAttack_MetaData), NewProp_Input_SecondaryAttack_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_Input_UltimateAttack = { "Input_UltimateAttack", nullptr, (EPropertyFlags)0x0124080000010001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, Input_UltimateAttack), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Input_UltimateAttack_MetaData), NewProp_Input_UltimateAttack_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_SpringArmComp = { "SpringArmComp", nullptr, (EPropertyFlags)0x01240800000a0009, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, SpringArmComp), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpringArmComp_MetaData), NewProp_SpringArmComp_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_CameraComp = { "CameraComp", nullptr, (EPropertyFlags)0x01240800000a0009, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, CameraComp), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CameraComp_MetaData), NewProp_CameraComp_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_InteractionComp = { "InteractionComp", nullptr, (EPropertyFlags)0x01240800000a0009, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, InteractionComp), Z_Construct_UClass_UWaveInteractionComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionComp_MetaData), NewProp_InteractionComp_MetaData) };
@@ -231,6 +300,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWavePlay
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_Input_Dash,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_Input_PrimaryAttack,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_Input_SecondaryAttack,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_Input_UltimateAttack,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_SpringArmComp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_CameraComp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_InteractionComp,
@@ -279,10 +349,10 @@ AWavePlayerCharacter::~AWavePlayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Player_WavePlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWavePlayerCharacter, AWavePlayerCharacter::StaticClass, TEXT("AWavePlayerCharacter"), &Z_Registration_Info_UClass_AWavePlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWavePlayerCharacter), 780025118U) },
+		{ Z_Construct_UClass_AWavePlayerCharacter, AWavePlayerCharacter::StaticClass, TEXT("AWavePlayerCharacter"), &Z_Registration_Info_UClass_AWavePlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWavePlayerCharacter), 2136277924U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Player_WavePlayerCharacter_h_3248199821(TEXT("/Script/WaveSurvival"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Player_WavePlayerCharacter_h_2248801538(TEXT("/Script/WaveSurvival"),
 	Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Player_WavePlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Player_WavePlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

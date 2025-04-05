@@ -5,12 +5,17 @@
 #include "WaveInteractionComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "NiagaraFunctionLibrary.h"
 #include "Camera/CameraComponent.h"
 #include "Components/AudioComponent.h"
+#include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Kismet/GameplayStatics.h"
 #include "WaveSurvival/SharedGameplayTags.h"
+#include "WaveSurvival/ActionSystem/WaveAction.h"
 #include "WaveSurvival/ActionSystem/WaveActionComponent.h"
+#include "WaveSurvival/ActionSystem/WaveAction_HitScanAttack.h"
 #include "WaveSurvival/ActionSystem/WaveAttributeComponent.h"
 
 
@@ -80,7 +85,16 @@ void AWavePlayerCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 
 	InputComp->BindAction(Input_PrimaryAttack, ETriggerEvent::Triggered, this, &AWavePlayerCharacter::PrimaryAttack);
 	InputComp->BindAction(Input_SecondaryAttack, ETriggerEvent::Triggered, this, &AWavePlayerCharacter::SecondaryAttack);
+	InputComp->BindAction(Input_UltimateAttack, ETriggerEvent::Triggered, this, &AWavePlayerCharacter::UltimateAttack);
 	InputComp->BindAction(Input_Dash, ETriggerEvent::Triggered, this, &AWavePlayerCharacter::Dash);
+}
+
+void AWavePlayerCharacter::SpawnHitScanEffects_Implementation(UWaveAction_HitScanAttack* InAction, const FHitScanData& InHitScanData)
+{
+	if (InAction)
+	{
+		InAction->MulticastSpawnHitScanEffects(this, InHitScanData);
+	}
 }
 
 void AWavePlayerCharacter::Move(const FInputActionInstance& Instance)
@@ -125,6 +139,11 @@ void AWavePlayerCharacter::PrimaryAttack()
 
 void AWavePlayerCharacter::SecondaryAttack()
 {
+	ActionComp->StartActionByName(this, SharedGameplayTags::Action_SecondaryAttack);
+}
+
+void AWavePlayerCharacter::UltimateAttack()
+{
 	ActionComp->StartActionByName(this, SharedGameplayTags::Action_BlackHole);
 }
 
@@ -144,13 +163,17 @@ void AWavePlayerCharacter::PlayAttackSound(USoundBase* InSound)
 	AttackSoundsComp->Play();
 }
 
-void AWavePlayerCharacter::OnHealthAttributeChanged(AActor* InstigatorActor, UWaveAttributeComponent* OwningComp,
-	float NewHealth, float Delta)
+void AWavePlayerCharacter::OnHealthAttributeChanged(AActor* InstigatorActor, UWaveAttributeComponent* OwningComp, float NewHealth, float Delta)
 {
+	if (Delta < 0.0f)
+	{
+		GetMesh()->SetScalarParameterValueOnMaterials(FName("Color"), GetWorld()->TimeSeconds);
+	}
+	
 	if (NewHealth <= 0 && Delta < 0.0f)
 	{
 		APlayerController* PC = Cast<APlayerController>(GetController());
-		DisableInput(PC);	
+		DisableInput(PC);
 	}
 }
 

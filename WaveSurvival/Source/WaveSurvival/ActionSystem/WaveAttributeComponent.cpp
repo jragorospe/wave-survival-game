@@ -17,6 +17,11 @@ UWaveAttributeComponent::UWaveAttributeComponent()
 
 bool UWaveAttributeComponent::ApplyHealthChange(AActor* InstigatorActor, float Delta)
 {
+	if (InstigatorActor == nullptr)
+	{
+		return false;
+	}
+	
 	if (!GetOwner()->CanBeDamaged() && Delta < 0.0f)
 	{
 		return false;

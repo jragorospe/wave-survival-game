@@ -27,10 +27,30 @@
 				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Animation/Sprinting_BS_1D.uasset",
 				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/ExampleContent/Audio/Abilities/A_Ability_FireBallCast01.uasset",
 				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/ExampleContent/Audio/Abilities/A_Ability_FireBallCast02.uasset",
-				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/VFX/N_HitScan_Projectile_EM.uasset",
 				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Materials/M_ParticleBase.uasset",
 				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Materials/MI_ParticleProjectile.uasset",
-				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/VFX/NS_HitScan_ProjectileTrail.uasset"
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/VFX/NS_HitScan_ProjectileTrail.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Actions/BP_Action_HitScanAttack.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Input/IA_UltimateAttack.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Projectiles/BP_Proj_Dash.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Actions/BP_Action_Dash.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/ExampleContent/Audio/Abilities/A_Ability_TimeSlow02.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/ExampleContent/Audio/Abilities/A_Ability_TimeSlow01.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/ExampleContent/Audio/Abilities/A_Ability_MeteorCast02.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Projectiles/BP_Proj_BlackHole.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Actions/BP_Action_BlackHole.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/ExampleContent/Audio/Abilities/A_Ability_MeteorImpact02.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/ExampleContent/Audio/Abilities/A_Ability_MeteorImpact03.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Materials/M_AbilityRadius.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Materials/MI_AbilityRadius_BlackHole.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Materials/T_HollowCircle.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Materials/MF_HitFlash.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/ExampleContent/Materials/M_CharacterSimple.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/ExampleContent/Materials/MI_CharacterSimple_Inst.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Actions/Effects/BP_Effect_Burning.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/Materials/T_Hollow_Circle.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/ExampleContent/Audio/Abilities/D.uasset",
+				"C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Content/VFX/N_HitScan_Projectile_EM.uasset"
 			]
 		}
 	]
