@@ -5,15 +5,12 @@
 #include "WaveInteractionComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
-#include "NiagaraFunctionLibrary.h"
 #include "Camera/CameraComponent.h"
 #include "Components/AudioComponent.h"
-#include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "WaveSurvival/SharedGameplayTags.h"
-#include "WaveSurvival/ActionSystem/WaveAction.h"
 #include "WaveSurvival/ActionSystem/WaveActionComponent.h"
 #include "WaveSurvival/ActionSystem/WaveAction_HitScanAttack.h"
 #include "WaveSurvival/ActionSystem/WaveAttributeComponent.h"
@@ -135,21 +132,29 @@ void AWavePlayerCharacter::SprintStop()
 void AWavePlayerCharacter::PrimaryAttack()
 {	
 	ActionComp->StartActionByName(this, SharedGameplayTags::Action_PrimaryAttack);
+	
+	OnPlayerAttack.Broadcast();
 }
 
 void AWavePlayerCharacter::SecondaryAttack()
 {
 	ActionComp->StartActionByName(this, SharedGameplayTags::Action_SecondaryAttack);
+
+	OnPlayerAttack.Broadcast();
 }
 
 void AWavePlayerCharacter::UltimateAttack()
 {
 	ActionComp->StartActionByName(this, SharedGameplayTags::Action_BlackHole);
+
+	OnPlayerAttack.Broadcast();
 }
 
 void AWavePlayerCharacter::Dash()
 {	
 	ActionComp->StartActionByName(this, SharedGameplayTags::Action_Dash);
+
+	OnPlayerAttack.Broadcast();
 }
 
 void AWavePlayerCharacter::PrimaryInteract()
@@ -168,12 +173,22 @@ void AWavePlayerCharacter::OnHealthAttributeChanged(AActor* InstigatorActor, UWa
 	if (Delta < 0.0f)
 	{
 		GetMesh()->SetScalarParameterValueOnMaterials(FName("Color"), GetWorld()->TimeSeconds);
+
+		const float RageDelta = FMath::Abs(Delta);
+		AttributeComp->ApplyRage(InstigatorActor, RageDelta);
 	}
 	
 	if (NewHealth <= 0 && Delta < 0.0f)
 	{
+		UGameplayStatics::PlaySoundAtLocation(this, DeathVOSound, GetActorLocation(), FRotator::ZeroRotator);
+		
+		SetLifeSpan(3.0f);
+		
 		APlayerController* PC = Cast<APlayerController>(GetController());
-		DisableInput(PC);
+		if (PC && PC->IsLocalController())
+		{
+			DisableInput(PC);
+		}
 	}
 }
 

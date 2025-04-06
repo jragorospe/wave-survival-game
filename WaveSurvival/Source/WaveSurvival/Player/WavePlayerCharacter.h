@@ -18,6 +18,9 @@ class UWaveAttributeComponent;
 class UWaveInteractionComponent;
 
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerAttack);
+
+
 UCLASS()
 class WAVESURVIVAL_API AWavePlayerCharacter : public ACharacter
 {
@@ -58,6 +61,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Input")
 	TObjectPtr<UInputAction> Input_UltimateAttack;
+	
+	UPROPERTY(EditDefaultsOnly, Category= Effects)
+	TObjectPtr<USoundBase> DeathVOSound;
 	
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	TObjectPtr<USpringArmComponent> SpringArmComp;
@@ -109,4 +115,7 @@ public:
 
 	UFUNCTION(NetMulticast, Unreliable)
 	void SpawnHitScanEffects(UWaveAction_HitScanAttack* InAction, const FHitScanData& InHitScanData);
+
+	UPROPERTY(BlueprintAssignable)
+	FOnPlayerAttack OnPlayerAttack;
 };

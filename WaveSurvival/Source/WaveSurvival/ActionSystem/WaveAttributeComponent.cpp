@@ -3,12 +3,16 @@
 
 #include "WaveAttributeComponent.h"
 #include "Net/UnrealNetwork.h"
+#include "WaveSurvival/Core/WaveGameModeBase.h"
 
 
 UWaveAttributeComponent::UWaveAttributeComponent()
 {
 	HealthMax = 100;
 	Health = HealthMax;
+	
+	Rage = 0;
+	RageMax = 100;
 
 	BaseDamage = 20.0f;
 
@@ -41,16 +45,33 @@ bool UWaveAttributeComponent::ApplyHealthChange(AActor* InstigatorActor, float D
 			MulticastHealthChanged(InstigatorActor, Health, ActualDelta);
 		}
 		
-		// if (ActualDelta < 0.0f && FMath::IsNearlyZero(Health))
-		// {
-		// 	if (AWaveGameModeBase* GM = GetWorld()->GetAuthGameMode<AWaveGameModeBase>())
-		// 	{
-		// 		GM->OnActorKilled(GetOwner(), InstigatorActor);
-		// 	}
-		// }
+		if (ActualDelta < 0.0f && FMath::IsNearlyZero(Health))
+		{
+			if (AWaveGameModeBase* GM = GetWorld()->GetAuthGameMode<AWaveGameModeBase>())
+			{
+				GM->OnActorKilled(GetOwner(), InstigatorActor);
+			}
+		}
 	}
 	
 	return !FMath::IsNearlyZero(ActualDelta);
+}
+
+bool UWaveAttributeComponent::ApplyRage(AActor* InstigatorActor, float Delta)
+{
+	const float OldRage = Rage;
+
+	Rage = FMath::Clamp(Rage + Delta, 0.0f, RageMax);
+
+	const float ActualDelta = Rage - OldRage;
+
+	if (!FMath::IsNearlyZero(ActualDelta))
+	{
+		OnRageChanged.Broadcast(InstigatorActor, this, Rage, ActualDelta);
+		return true;
+	}
+
+	return false;
 }
 
 UWaveAttributeComponent* UWaveAttributeComponent::GetAttributes(AActor* FromActor)
@@ -73,11 +94,19 @@ void UWaveAttributeComponent::MulticastHealthChanged_Implementation(AActor* Inst
 	OnHealthChanged.Broadcast(InstigatorActor, this, NewHealth, Delta);
 }
 
+void UWaveAttributeComponent::MulticastRageChanged_Implementation(AActor* InstigatorActor, float NewRage, float Delta)
+{
+	OnRageChanged.Broadcast(InstigatorActor, this, NewRage, Delta);
+}
+
 void UWaveAttributeComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	DOREPLIFETIME(UWaveAttributeComponent, Health);
 	DOREPLIFETIME(UWaveAttributeComponent, HealthMax);
+
+	DOREPLIFETIME(UWaveAttributeComponent, Rage);
+	DOREPLIFETIME(UWaveAttributeComponent, RageMax);
 }
 

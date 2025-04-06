@@ -23,8 +23,8 @@ AWaveProjectile_BlackHole::AWaveProjectile_BlackHole()
 	
 	MoveComp->InitialSpeed = 0.0f;
 
-	DamageAmount = 10.0f;
-	DamageInterval = 0.2f;
+	DamageAmount = 20.0f;
+	DamageInterval = 0.5f;
 }
 
 void AWaveProjectile_BlackHole::BeginPlay()
@@ -65,8 +65,6 @@ void AWaveProjectile_BlackHole::OnActorOverlap(UPrimitiveComponent* OverlappedCo
 	{
 		return;
 	}
-
-	ApplyTickDamage(OtherActor);
 
 	FTimerDelegate Delegate;
 	Delegate.BindUObject(this, &ThisClass::ApplyTickDamage, OtherActor);

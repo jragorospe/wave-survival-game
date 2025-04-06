@@ -4,13 +4,12 @@
 #include "WaveProjectile_Magic.h"
 #include "Components/SphereComponent.h"
 #include "WaveSurvival/ActionSystem/WaveActionComponent.h"
+#include "WaveSurvival/ActionSystem/WaveActionEffect.h"
 #include "WaveSurvival/Core/WaveGameplayFunctionLibrary.h"
 
 
 AWaveProjectile_Magic::AWaveProjectile_Magic()
 {
-	SphereComp->SetSphereRadius(20.0f);
-	
 	InitialLifeSpan = 10.0f;
 	DamageAmount = 50.0f;
 

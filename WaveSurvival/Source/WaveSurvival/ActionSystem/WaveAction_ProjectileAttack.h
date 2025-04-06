@@ -32,7 +32,7 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Attack")
 	TSubclassOf<AActor> ProjectileClass;
 
-	UPROPERTY(VisibleAnywhere, Category = "Effects")
+	UPROPERTY(EditDefaultsOnly, Category = "Effects")
 	FName HandSocketName;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Attack")

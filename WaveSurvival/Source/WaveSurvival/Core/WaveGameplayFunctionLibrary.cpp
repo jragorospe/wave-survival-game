@@ -12,8 +12,19 @@ bool UWaveGameplayFunctionLibrary::ApplyDamage(AActor* DamageCauser, AActor* Tar
 	{
 		return false;
 	}
+	
+	if (AttributeComp->ApplyHealthChange(DamageCauser, -DamageAmount))
+	{
+		if (UWaveAttributeComponent* const AttackerComp = UWaveAttributeComponent::GetAttributes(DamageCauser))
+		{
+			const float RageAmount = DamageAmount / 3;
+			AttackerComp->ApplyRage(DamageCauser, RageAmount);
+		}
 
-	return AttributeComp->ApplyHealthChange(DamageCauser, -DamageAmount);
+		return true;
+	}
+	
+	return false;
 }
 
 bool UWaveGameplayFunctionLibrary::ApplyDirectionalDamage(AActor* DamageCauser, AActor* TargetActor, float DamageAmount, const FHitResult& HitResult)
