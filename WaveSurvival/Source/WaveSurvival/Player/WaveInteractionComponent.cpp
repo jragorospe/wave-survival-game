@@ -12,7 +12,7 @@ UWaveInteractionComponent::UWaveInteractionComponent()
 {
 	PrimaryComponentTick.bCanEverTick = true;
 	
-	TraceRadius = 30.0f;
+	TraceRadius = 45.0f;
 	TraceChannel = ECC_WorldDynamic;
 }
 

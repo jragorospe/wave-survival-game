@@ -29,6 +29,7 @@ WAVESURVIVAL_API void FOnActionStateChanged_DelegateWrapper(const FMulticastScri
 	DECLARE_FUNCTION(execServerStartAction); \
 	DECLARE_FUNCTION(execStopActionByName); \
 	DECLARE_FUNCTION(execStartActionByName); \
+	DECLARE_FUNCTION(execGetAction); \
 	DECLARE_FUNCTION(execRemoveAction); \
 	DECLARE_FUNCTION(execAddAction);
 

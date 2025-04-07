@@ -15,6 +15,7 @@ UWaveAttributeComponent::UWaveAttributeComponent()
 	RageMax = 100;
 
 	BaseDamage = 30.0f;
+	Damage = BaseDamage;
 
 	SetIsReplicatedByDefault(true);
 }
@@ -76,6 +77,33 @@ bool UWaveAttributeComponent::ApplyRage(AActor* InstigatorActor, float Delta)
 	return !FMath::IsNearlyZero(ActualDelta);
 }
 
+bool UWaveAttributeComponent::ApplyDamageMultiplier(AActor* InstigatorActor, float Multiplier)
+{
+	if (Multiplier <= 0.0f || Damage != BaseDamage)
+	{
+		return false;
+	}
+
+	Damage = BaseDamage * Multiplier;
+
+	if (GetOwner()->HasAuthority())
+	{
+		MulticastDamageChanged(InstigatorActor, Damage, Multiplier);
+	}
+
+	return true;
+}
+
+void UWaveAttributeComponent::RevertToBaseDamage(AActor* InstigatorActor)
+{
+	Damage = BaseDamage;
+
+	if (GetOwner()->HasAuthority())
+	{
+		MulticastDamageChanged(InstigatorActor, Damage, 1.0f);
+	}
+}
+
 UWaveAttributeComponent* UWaveAttributeComponent::GetAttributes(AActor* FromActor)
 {
 	if (FromActor)
@@ -101,6 +129,11 @@ void UWaveAttributeComponent::MulticastRageChanged_Implementation(AActor* Instig
 	OnRageChanged.Broadcast(InstigatorActor, this, NewRage, Delta);
 }
 
+void UWaveAttributeComponent::MulticastDamageChanged_Implementation(AActor* InstigatorActor, float NewDamage, float Multiplier)
+{
+	OnDamageChanged.Broadcast(InstigatorActor, this, NewDamage, Multiplier);
+}
+
 void UWaveAttributeComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
@@ -112,5 +145,6 @@ void UWaveAttributeComponent::GetLifetimeReplicatedProps(TArray<FLifetimePropert
 	DOREPLIFETIME(UWaveAttributeComponent, RageMax);
 
 	DOREPLIFETIME(UWaveAttributeComponent, BaseDamage);
+	DOREPLIFETIME(UWaveAttributeComponent, Damage);
 }
 

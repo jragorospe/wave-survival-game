@@ -31,6 +31,9 @@ public:
 	void RemoveAction(UWaveAction* ActionToRemove);
 
 	UFUNCTION(BlueprintCallable, Category = "Actions")
+	UWaveAction* GetAction(TSubclassOf<UWaveAction> ActionClass) const;
+
+	UFUNCTION(BlueprintCallable, Category = "Actions")
 	bool StartActionByName(AActor* Instigator, FGameplayTag ActionName);
 
 	UFUNCTION(BlueprintCallable, Category = "Actions")

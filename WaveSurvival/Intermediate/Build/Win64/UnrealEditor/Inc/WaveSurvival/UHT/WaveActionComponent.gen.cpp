@@ -124,6 +124,53 @@ DEFINE_FUNCTION(UWaveActionComponent::execAddAction)
 }
 // End Class UWaveActionComponent Function AddAction
 
+// Begin Class UWaveActionComponent Function GetAction
+struct Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics
+{
+	struct WaveActionComponent_eventGetAction_Parms
+	{
+		TSubclassOf<UWaveAction> ActionClass;
+		UWaveAction* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Actions" },
+		{ "ModuleRelativePath", "ActionSystem/WaveActionComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FClassPropertyParams NewProp_ActionClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::NewProp_ActionClass = { "ActionClass", nullptr, (EPropertyFlags)0x0014000000000080, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WaveActionComponent_eventGetAction_Parms, ActionClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UWaveAction_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WaveActionComponent_eventGetAction_Parms, ReturnValue), Z_Construct_UClass_UWaveAction_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::NewProp_ActionClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWaveActionComponent, nullptr, "GetAction", nullptr, nullptr, Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::WaveActionComponent_eventGetAction_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::WaveActionComponent_eventGetAction_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWaveActionComponent_GetAction()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWaveActionComponent_GetAction_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWaveActionComponent::execGetAction)
+{
+	P_GET_OBJECT(UClass,Z_Param_ActionClass);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UWaveAction**)Z_Param__Result=P_THIS->GetAction(Z_Param_ActionClass);
+	P_NATIVE_END;
+}
+// End Class UWaveActionComponent Function GetAction
+
 // Begin Class UWaveActionComponent Function RemoveAction
 struct Z_Construct_UFunction_UWaveActionComponent_RemoveAction_Statics
 {
@@ -397,6 +444,7 @@ void UWaveActionComponent::StaticRegisterNativesUWaveActionComponent()
 	UClass* Class = UWaveActionComponent::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "AddAction", &UWaveActionComponent::execAddAction },
+		{ "GetAction", &UWaveActionComponent::execGetAction },
 		{ "RemoveAction", &UWaveActionComponent::execRemoveAction },
 		{ "ServerStartAction", &UWaveActionComponent::execServerStartAction },
 		{ "ServerStopAction", &UWaveActionComponent::execServerStopAction },
@@ -449,6 +497,7 @@ struct Z_Construct_UClass_UWaveActionComponent_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UWaveActionComponent_AddAction, "AddAction" }, // 1771417865
+		{ &Z_Construct_UFunction_UWaveActionComponent_GetAction, "GetAction" }, // 3180527427
 		{ &Z_Construct_UFunction_UWaveActionComponent_RemoveAction, "RemoveAction" }, // 3388222112
 		{ &Z_Construct_UFunction_UWaveActionComponent_ServerStartAction, "ServerStartAction" }, // 2803990961
 		{ &Z_Construct_UFunction_UWaveActionComponent_ServerStopAction, "ServerStopAction" }, // 2540762916
@@ -525,10 +574,10 @@ UWaveActionComponent::~UWaveActionComponent() {}
 struct Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveActionComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWaveActionComponent, UWaveActionComponent::StaticClass, TEXT("UWaveActionComponent"), &Z_Registration_Info_UClass_UWaveActionComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWaveActionComponent), 4154964161U) },
+		{ Z_Construct_UClass_UWaveActionComponent, UWaveActionComponent::StaticClass, TEXT("UWaveActionComponent"), &Z_Registration_Info_UClass_UWaveActionComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWaveActionComponent), 873594459U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveActionComponent_h_3562439458(TEXT("/Script/WaveSurvival"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveActionComponent_h_871898312(TEXT("/Script/WaveSurvival"),
 	Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveActionComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveActionComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

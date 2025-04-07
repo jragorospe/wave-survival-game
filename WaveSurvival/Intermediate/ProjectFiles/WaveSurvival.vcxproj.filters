@@ -25,6 +25,9 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
@@ -65,12 +68,6 @@
       <Filter>Source\WaveSurvival\ActionSystem</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveActionEffect.h">
-      <Filter>Source\WaveSurvival\ActionSystem</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveActionEffect_Burning.cpp">
-      <Filter>Source\WaveSurvival\ActionSystem</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveActionEffect_Burning.h">
       <Filter>Source\WaveSurvival\ActionSystem</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveAction_HitScanAttack.cpp">
@@ -120,6 +117,39 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\WaveSurvival\Core\WaveGameplayInterface.h">
       <Filter>Source\WaveSurvival\Core</Filter>
+    </ClInclude>
+    <Filter Include="Source\WaveSurvival\Pickups">
+      <UniqueIdentifier>{22C42356-1947-338F-9116-597B1D79B5AE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WaveSurvival\Pickups\WaveActionEffect_DoubleDamage.cpp">
+      <Filter>Source\WaveSurvival\Pickups</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Pickups\WaveActionEffect_DoubleDamage.h">
+      <Filter>Source\WaveSurvival\Pickups</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\Pickups\WavePickupActor.cpp">
+      <Filter>Source\WaveSurvival\Pickups</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Pickups\WavePickupActor.h">
+      <Filter>Source\WaveSurvival\Pickups</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\Pickups\WavePickupActor_GrantAction.cpp">
+      <Filter>Source\WaveSurvival\Pickups</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Pickups\WavePickupActor_GrantAction.h">
+      <Filter>Source\WaveSurvival\Pickups</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\Pickups\WavePickupActor_HealthPotion.cpp">
+      <Filter>Source\WaveSurvival\Pickups</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Pickups\WavePickupActor_HealthPotion.h">
+      <Filter>Source\WaveSurvival\Pickups</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\Pickups\WavePickupActor_RagePotion.cpp">
+      <Filter>Source\WaveSurvival\Pickups</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Pickups\WavePickupActor_RagePotion.h">
+      <Filter>Source\WaveSurvival\Pickups</Filter>
     </ClInclude>
     <Filter Include="Source\WaveSurvival\Player">
       <UniqueIdentifier>{D5B1E061-0C3E-39FD-9E02-E8627041CE88}</UniqueIdentifier>

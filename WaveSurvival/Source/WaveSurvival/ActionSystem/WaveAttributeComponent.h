@@ -24,6 +24,9 @@ public:
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Replicated, Category = "Attributes")
 	float BaseDamage;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Replicated, Category = "Attributes")
+	float Damage;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Replicated, Category = "Attributes")
 	float Health;
@@ -40,8 +43,11 @@ protected:
 	UFUNCTION(NetMulticast, Reliable)
 	void MulticastHealthChanged(AActor* InstigatorActor, float NewHealth, float Delta);
 
-	UFUNCTION(NetMulticast, Unreliable)
+	UFUNCTION(NetMulticast, Reliable)
 	void MulticastRageChanged(AActor* InstigatorActor, float NewRage, float Delta);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void MulticastDamageChanged(AActor* InstigatorActor, float NewDamage, float Multiplier);
 
 public:
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
@@ -78,9 +84,27 @@ public:
 	}
 
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	float GetRageMax() const
+	{
+		return RageMax;
+	}
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	bool IsFullRage() const
+	{
+		return FMath::IsNearlyEqual(Rage, RageMax);
+	}
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	float GetBaseDamage() const
 	{
 		return BaseDamage;
+	}
+	
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	float GetDamage() const
+	{
+		return Damage;
 	}
 
 	UPROPERTY(BlueprintAssignable, Category = "Attributes")
@@ -88,10 +112,19 @@ public:
 	
 	UPROPERTY(BlueprintAssignable, Category = "Attributes")
 	FOnAttributeChanged OnRageChanged;
+
+	UPROPERTY(BlueprintAssignable, Category = "Attributes")
+	FOnAttributeChanged OnDamageChanged;
 	
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	bool ApplyHealthChange(AActor* InstigatorActor, float Delta);
 
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	bool ApplyRage(AActor* InstigatorActor, float Delta);
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	bool ApplyDamageMultiplier(AActor* InstigatorActor, float Multiplier);
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	void RevertToBaseDamage(AActor* InstigatorActor);
 };

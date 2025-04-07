@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\unrealeditor\\inc\\wavesurvival\\uht\\wavepickupactor_ragepotion.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\x64\\wavesurvivaleditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\wavesurvival\\definitions.wavesurvival.h",
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\source\\wavesurvival\\pickups\\wavepickupactor_ragepotion.h",
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\source\\wavesurvival\\pickups\\wavepickupactor.h",
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\source\\wavesurvival\\core\\wavegameplayinterface.h",
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\unrealeditor\\inc\\wavesurvival\\uht\\wavegameplayinterface.generated.h",
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\unrealeditor\\inc\\wavesurvival\\uht\\wavepickupactor.generated.h",
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\unrealeditor\\inc\\wavesurvival\\uht\\wavepickupactor_ragepotion.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

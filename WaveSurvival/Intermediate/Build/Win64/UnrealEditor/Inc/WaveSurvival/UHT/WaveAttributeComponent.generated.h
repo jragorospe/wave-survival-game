@@ -21,17 +21,24 @@ WAVESURVIVAL_API void FOnAttributeChanged_DelegateWrapper(const FMulticastScript
 
 
 #define FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveAttributeComponent_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void MulticastDamageChanged_Implementation(AActor* InstigatorActor, float NewDamage, float Multiplier); \
 	virtual void MulticastRageChanged_Implementation(AActor* InstigatorActor, float NewRage, float Delta); \
 	virtual void MulticastHealthChanged_Implementation(AActor* InstigatorActor, float NewHealth, float Delta); \
+	DECLARE_FUNCTION(execRevertToBaseDamage); \
+	DECLARE_FUNCTION(execApplyDamageMultiplier); \
 	DECLARE_FUNCTION(execApplyRage); \
 	DECLARE_FUNCTION(execApplyHealthChange); \
+	DECLARE_FUNCTION(execGetDamage); \
 	DECLARE_FUNCTION(execGetBaseDamage); \
+	DECLARE_FUNCTION(execIsFullRage); \
+	DECLARE_FUNCTION(execGetRageMax); \
 	DECLARE_FUNCTION(execGetRage); \
 	DECLARE_FUNCTION(execGetHealthMax); \
 	DECLARE_FUNCTION(execGetHealth); \
 	DECLARE_FUNCTION(execIsFullHealth); \
 	DECLARE_FUNCTION(execIsAlive); \
 	DECLARE_FUNCTION(execKill); \
+	DECLARE_FUNCTION(execMulticastDamageChanged); \
 	DECLARE_FUNCTION(execMulticastRageChanged); \
 	DECLARE_FUNCTION(execMulticastHealthChanged); \
 	DECLARE_FUNCTION(execGetAttributes);
@@ -50,6 +57,7 @@ public: \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
 		BaseDamage=NETFIELD_REP_START, \
+		Damage, \
 		Health, \
 		HealthMax, \
 		Rage, \

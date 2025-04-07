@@ -78,6 +78,19 @@ void UWaveActionComponent::RemoveAction(UWaveAction* ActionToRemove)
 	Actions.Remove(ActionToRemove);
 }
 
+UWaveAction* UWaveActionComponent::GetAction(TSubclassOf<UWaveAction> ActionClass) const
+{
+	for (UWaveAction* Action : Actions)
+	{
+		if (Action->IsA(ActionClass))
+		{
+			return Action;
+		}
+	}
+
+	return nullptr;
+}
+
 bool UWaveActionComponent::StartActionByName(AActor* Instigator, FGameplayTag ActionName)
 {
 	const AActor* const Owner = GetOwner();

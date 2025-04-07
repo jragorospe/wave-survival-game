@@ -19,7 +19,7 @@ bool UWaveGameplayFunctionLibrary::ApplyDamage(AActor* DamageCauser, AActor* Tar
 		return false;
 	}
 
-	const float DamageAmount = DamageMultiplier * AttackerComp->GetBaseDamage();
+	const float DamageAmount = DamageMultiplier * AttackerComp->GetDamage();
 	if (TargetComp->ApplyHealthChange(DamageCauser, -DamageAmount))
 	{
 		const float RageAmount = DamageAmount / 3;
