@@ -131,30 +131,34 @@ void AWavePlayerCharacter::SprintStop()
 
 void AWavePlayerCharacter::PrimaryAttack()
 {	
-	ActionComp->StartActionByName(this, SharedGameplayTags::Action_PrimaryAttack);
-	
-	OnPlayerAttack.Broadcast();
+	if (ActionComp->StartActionByName(this, SharedGameplayTags::Action_PrimaryAttack))
+	{
+		OnPlayerAttack.Broadcast();
+	}
 }
 
 void AWavePlayerCharacter::SecondaryAttack()
 {
-	ActionComp->StartActionByName(this, SharedGameplayTags::Action_SecondaryAttack);
-
-	OnPlayerAttack.Broadcast();
+	if (ActionComp->StartActionByName(this, SharedGameplayTags::Action_SecondaryAttack))
+	{
+		OnPlayerAttack.Broadcast();
+	}
 }
 
 void AWavePlayerCharacter::UltimateAttack()
 {
-	ActionComp->StartActionByName(this, SharedGameplayTags::Action_BlackHole);
-
-	OnPlayerAttack.Broadcast();
+	if (ActionComp->StartActionByName(this, SharedGameplayTags::Action_BlackHole))
+	{
+		OnPlayerAttack.Broadcast();
+	}
 }
 
 void AWavePlayerCharacter::Dash()
 {	
-	ActionComp->StartActionByName(this, SharedGameplayTags::Action_Dash);
-
-	OnPlayerAttack.Broadcast();
+	if (ActionComp->StartActionByName(this, SharedGameplayTags::Action_Dash))
+	{
+		OnPlayerAttack.Broadcast();
+	}
 }
 
 void AWavePlayerCharacter::PrimaryInteract()

@@ -14,7 +14,7 @@ UWaveAttributeComponent::UWaveAttributeComponent()
 	Rage = 0;
 	RageMax = 100;
 
-	BaseDamage = 20.0f;
+	BaseDamage = 30.0f;
 
 	SetIsReplicatedByDefault(true);
 }
@@ -65,13 +65,15 @@ bool UWaveAttributeComponent::ApplyRage(AActor* InstigatorActor, float Delta)
 
 	const float ActualDelta = Rage - OldRage;
 
-	if (!FMath::IsNearlyZero(ActualDelta))
+	if (GetOwner()->HasAuthority())
 	{
-		OnRageChanged.Broadcast(InstigatorActor, this, Rage, ActualDelta);
-		return true;
+		if (!FMath::IsNearlyZero(ActualDelta))
+		{
+			MulticastRageChanged(InstigatorActor, Rage, ActualDelta);
+		}
 	}
 
-	return false;
+	return !FMath::IsNearlyZero(ActualDelta);
 }
 
 UWaveAttributeComponent* UWaveAttributeComponent::GetAttributes(AActor* FromActor)
