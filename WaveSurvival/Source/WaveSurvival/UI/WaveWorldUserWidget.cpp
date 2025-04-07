@@ -28,8 +28,7 @@ void UWaveWorldUserWidget::NativeTick(const FGeometry& MyGeometry, float InDelta
 
 	if (bIsOnScreen)
 	{
-		float Scale = UWidgetLayoutLibrary::GetViewportScale(this);
-
+		const float Scale = UWidgetLayoutLibrary::GetViewportScale(this);
 		ScreenPosition /= Scale;
 
 		ParentOverlay->SetRenderTranslation(ScreenPosition);

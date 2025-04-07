@@ -5,6 +5,7 @@
 #include "WaveInteractionComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+#include "Blueprint/UserWidget.h"
 #include "Camera/CameraComponent.h"
 #include "Components/AudioComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -14,6 +15,7 @@
 #include "WaveSurvival/ActionSystem/WaveActionComponent.h"
 #include "WaveSurvival/ActionSystem/WaveAction_HitScanAttack.h"
 #include "WaveSurvival/ActionSystem/WaveAttributeComponent.h"
+#include "WaveSurvival/UI/WaveWorldUserWidget.h"
 
 
 AWavePlayerCharacter::AWavePlayerCharacter()
@@ -176,6 +178,16 @@ void AWavePlayerCharacter::OnHealthAttributeChanged(AActor* InstigatorActor, UWa
 {
 	if (Delta < 0.0f)
 	{
+		if (!IsLocallyControlled() && ActiveHealthBar == nullptr && NewHealth > 0.0f)
+		{
+			ActiveHealthBar = CreateWidget<UWaveWorldUserWidget>(GetWorld(), HealthBarWidgetClass);
+			if (ActiveHealthBar)
+			{
+				ActiveHealthBar->AttachedActor = this;
+				UWaveWorldUserWidget::AddToRootCanvasPanel(ActiveHealthBar);
+			}
+		}
+		
 		GetMesh()->SetScalarParameterValueOnMaterials(FName("Color"), GetWorld()->TimeSeconds);
 
 		const float RageDelta = FMath::Abs(Delta);

@@ -33,7 +33,7 @@ bool UWaveAttributeComponent::ApplyHealthChange(AActor* InstigatorActor, float D
 	}
 
 	const float OldHealth = Health;
-	const float NewHealth = FMath::Clamp(Health + Delta, 0.0f, HealthMax);
+	const float NewHealth = FMath::Floor(FMath::Clamp(Health + Delta, 0.0f, HealthMax));
 
 	const float ActualDelta = NewHealth - OldHealth;
 	

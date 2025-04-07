@@ -9,6 +9,7 @@
 #include "WaveSurvival/ActionSystem/WaveAction_HitScanAttack.h"
 #include "WavePlayerCharacter.generated.h"
 
+class UWaveWorldUserWidget;
 class UWaveAction;
 class UInputMappingContext;
 class UCameraComponent;
@@ -85,6 +86,12 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	TObjectPtr<UAudioComponent> AttackSoundsComp;
+
+	UPROPERTY(EditDefaultsOnly, Category = "UI")
+	TSubclassOf<UWaveWorldUserWidget> HealthBarWidgetClass;
+	
+	UPROPERTY()
+	TObjectPtr<UWaveWorldUserWidget> ActiveHealthBar;
 
 	// Enhanced Input
 	void Move(const FInputActionInstance& Instance);
