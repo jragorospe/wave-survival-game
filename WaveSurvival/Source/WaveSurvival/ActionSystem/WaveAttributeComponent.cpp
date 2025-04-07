@@ -110,5 +110,7 @@ void UWaveAttributeComponent::GetLifetimeReplicatedProps(TArray<FLifetimePropert
 
 	DOREPLIFETIME(UWaveAttributeComponent, Rage);
 	DOREPLIFETIME(UWaveAttributeComponent, RageMax);
+
+	DOREPLIFETIME(UWaveAttributeComponent, BaseDamage);
 }
 

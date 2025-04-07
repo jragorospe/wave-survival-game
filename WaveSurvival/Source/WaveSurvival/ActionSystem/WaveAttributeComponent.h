@@ -23,6 +23,9 @@ public:
 
 protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Replicated, Category = "Attributes")
+	float BaseDamage;
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Replicated, Category = "Attributes")
 	float Health;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Replicated, Category = "Attributes")
@@ -40,9 +43,7 @@ protected:
 	UFUNCTION(NetMulticast, Unreliable)
 	void MulticastRageChanged(AActor* InstigatorActor, float NewRage, float Delta);
 
-public:	
-	float BaseDamage;
-
+public:
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	bool Kill(AActor* InstigatorActor);
 
@@ -70,10 +71,16 @@ public:
 		return HealthMax;
 	}
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	float GetRage() const
 	{
 		return Rage;
+	}
+
+	UFUNCTION(BlueprintCallable, Category = "Attributes")
+	float GetBaseDamage() const
+	{
+		return BaseDamage;
 	}
 
 	UPROPERTY(BlueprintAssignable, Category = "Attributes")

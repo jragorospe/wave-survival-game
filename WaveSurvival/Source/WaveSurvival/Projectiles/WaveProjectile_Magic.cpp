@@ -11,7 +11,7 @@
 AWaveProjectile_Magic::AWaveProjectile_Magic()
 {
 	InitialLifeSpan = 10.0f;
-	DamageAmount = 50.0f;
+	DamageMultiplier = 1.0f;
 
 	DamagedActor = nullptr;
 }
@@ -31,7 +31,7 @@ void AWaveProjectile_Magic::OnActorOverlap(UPrimitiveComponent* OverlappedCompon
 	}
 
 	UWaveActionComponent* const OtherActionComp = OtherActor->FindComponentByClass<UWaveActionComponent>();
-	if (UWaveGameplayFunctionLibrary::ApplyDirectionalDamage(GetInstigator(), OtherActor, DamageAmount, SweepResult))
+	if (UWaveGameplayFunctionLibrary::ApplyDirectionalDamage(GetInstigator(), OtherActor, DamageMultiplier, SweepResult))
 	{
 		DamagedActor = OtherActor;
 		

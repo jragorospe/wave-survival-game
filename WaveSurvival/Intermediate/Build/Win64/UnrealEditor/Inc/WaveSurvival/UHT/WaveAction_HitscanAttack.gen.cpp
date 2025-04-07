@@ -349,7 +349,7 @@ struct Z_Construct_UClass_UWaveAction_HitScanAttack_Statics
 		{ "Category", "Targeting" },
 		{ "ModuleRelativePath", "ActionSystem/WaveAction_HitScanAttack.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DamageAmount_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DamageMultiplier_MetaData[] = {
 		{ "Category", "Damage" },
 		{ "ModuleRelativePath", "ActionSystem/WaveAction_HitScanAttack.h" },
 	};
@@ -401,7 +401,7 @@ struct Z_Construct_UClass_UWaveAction_HitScanAttack_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SweepRadius;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_HitScanLength;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageAmount;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageMultiplier;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_CollisionChannel;
 	static const UECodeGen_Private::FNamePropertyParams NewProp_HandSocketName;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_AttackAnimDelay;
@@ -429,7 +429,7 @@ struct Z_Construct_UClass_UWaveAction_HitScanAttack_Statics
 };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_SweepRadius = { "SweepRadius", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWaveAction_HitScanAttack, SweepRadius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepRadius_MetaData), NewProp_SweepRadius_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_HitScanLength = { "HitScanLength", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWaveAction_HitScanAttack, HitScanLength), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HitScanLength_MetaData), NewProp_HitScanLength_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_DamageAmount = { "DamageAmount", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWaveAction_HitScanAttack, DamageAmount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamageAmount_MetaData), NewProp_DamageAmount_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_DamageMultiplier = { "DamageMultiplier", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWaveAction_HitScanAttack, DamageMultiplier), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamageMultiplier_MetaData), NewProp_DamageMultiplier_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_CollisionChannel = { "CollisionChannel", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWaveAction_HitScanAttack, CollisionChannel), Z_Construct_UEnum_Engine_ECollisionChannel, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CollisionChannel_MetaData), NewProp_CollisionChannel_MetaData) }; // 756624936
 const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_HandSocketName = { "HandSocketName", nullptr, (EPropertyFlags)0x0020080000020001, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWaveAction_HitScanAttack, HandSocketName), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HandSocketName_MetaData), NewProp_HandSocketName_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_AttackAnimDelay = { "AttackAnimDelay", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWaveAction_HitScanAttack, AttackAnimDelay), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttackAnimDelay_MetaData), NewProp_AttackAnimDelay_MetaData) };
@@ -444,7 +444,7 @@ const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_UWaveAction_HitS
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_SweepRadius,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_HitScanLength,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_DamageAmount,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_DamageMultiplier,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_CollisionChannel,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_HandSocketName,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWaveAction_HitScanAttack_Statics::NewProp_AttackAnimDelay,
@@ -501,10 +501,10 @@ struct Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveS
 		{ FHitScanData::StaticStruct, Z_Construct_UScriptStruct_FHitScanData_Statics::NewStructOps, TEXT("HitScanData"), &Z_Registration_Info_UScriptStruct_HitScanData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FHitScanData), 1635251743U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWaveAction_HitScanAttack, UWaveAction_HitScanAttack::StaticClass, TEXT("UWaveAction_HitScanAttack"), &Z_Registration_Info_UClass_UWaveAction_HitScanAttack, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWaveAction_HitScanAttack), 3394356528U) },
+		{ Z_Construct_UClass_UWaveAction_HitScanAttack, UWaveAction_HitScanAttack::StaticClass, TEXT("UWaveAction_HitScanAttack"), &Z_Registration_Info_UClass_UWaveAction_HitScanAttack, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWaveAction_HitScanAttack), 569958904U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveAction_HitScanAttack_h_979546913(TEXT("/Script/WaveSurvival"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveAction_HitScanAttack_h_3995328968(TEXT("/Script/WaveSurvival"),
 	Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveAction_HitScanAttack_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveAction_HitScanAttack_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveAction_HitScanAttack_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveAction_HitScanAttack_h_Statics::ScriptStructInfo),
 	nullptr, 0);

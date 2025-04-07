@@ -20,7 +20,7 @@ class WAVESURVIVAL_API AWaveProjectile_Magic : public AWaveProjectile
 
 protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
-	float DamageAmount;
+	float DamageMultiplier;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
 	TSubclassOf<UWaveActionEffect> BurningEffectClass;

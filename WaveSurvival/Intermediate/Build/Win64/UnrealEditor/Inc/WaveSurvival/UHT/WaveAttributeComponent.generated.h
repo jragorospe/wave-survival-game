@@ -25,6 +25,7 @@ WAVESURVIVAL_API void FOnAttributeChanged_DelegateWrapper(const FMulticastScript
 	virtual void MulticastHealthChanged_Implementation(AActor* InstigatorActor, float NewHealth, float Delta); \
 	DECLARE_FUNCTION(execApplyRage); \
 	DECLARE_FUNCTION(execApplyHealthChange); \
+	DECLARE_FUNCTION(execGetBaseDamage); \
 	DECLARE_FUNCTION(execGetRage); \
 	DECLARE_FUNCTION(execGetHealthMax); \
 	DECLARE_FUNCTION(execGetHealth); \
@@ -48,7 +49,8 @@ public: \
 	enum class ENetFields_Private : uint16 \
 	{ \
 		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
-		Health=NETFIELD_REP_START, \
+		BaseDamage=NETFIELD_REP_START, \
+		Health, \
 		HealthMax, \
 		Rage, \
 		RageMax, \

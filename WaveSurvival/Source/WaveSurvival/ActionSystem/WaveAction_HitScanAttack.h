@@ -59,7 +59,7 @@ protected:
 	float HitScanLength;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
-	float DamageAmount;
+	float DamageMultiplier;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Targeting")
 	TEnumAsByte<ECollisionChannel> CollisionChannel;

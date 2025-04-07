@@ -23,7 +23,7 @@ protected:
 	float Radius;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
-	float DamageAmount;
+	float DamageMultiplier;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
 	float DamageInterval;

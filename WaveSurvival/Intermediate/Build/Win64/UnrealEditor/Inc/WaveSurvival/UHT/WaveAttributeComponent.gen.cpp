@@ -247,6 +247,48 @@ DEFINE_FUNCTION(UWaveAttributeComponent::execGetAttributes)
 }
 // End Class UWaveAttributeComponent Function GetAttributes
 
+// Begin Class UWaveAttributeComponent Function GetBaseDamage
+struct Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage_Statics
+{
+	struct WaveAttributeComponent_eventGetBaseDamage_Parms
+	{
+		float ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Attributes" },
+		{ "ModuleRelativePath", "ActionSystem/WaveAttributeComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WaveAttributeComponent_eventGetBaseDamage_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWaveAttributeComponent, nullptr, "GetBaseDamage", nullptr, nullptr, Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage_Statics::WaveAttributeComponent_eventGetBaseDamage_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage_Statics::WaveAttributeComponent_eventGetBaseDamage_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWaveAttributeComponent::execGetBaseDamage)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetBaseDamage();
+	P_NATIVE_END;
+}
+// End Class UWaveAttributeComponent Function GetBaseDamage
+
 // Begin Class UWaveAttributeComponent Function GetHealth
 struct Z_Construct_UFunction_UWaveAttributeComponent_GetHealth_Statics
 {
@@ -340,6 +382,7 @@ struct Z_Construct_UFunction_UWaveAttributeComponent_GetRage_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Attributes" },
 		{ "ModuleRelativePath", "ActionSystem/WaveAttributeComponent.h" },
 	};
 #endif // WITH_METADATA
@@ -648,6 +691,7 @@ void UWaveAttributeComponent::StaticRegisterNativesUWaveAttributeComponent()
 		{ "ApplyHealthChange", &UWaveAttributeComponent::execApplyHealthChange },
 		{ "ApplyRage", &UWaveAttributeComponent::execApplyRage },
 		{ "GetAttributes", &UWaveAttributeComponent::execGetAttributes },
+		{ "GetBaseDamage", &UWaveAttributeComponent::execGetBaseDamage },
 		{ "GetHealth", &UWaveAttributeComponent::execGetHealth },
 		{ "GetHealthMax", &UWaveAttributeComponent::execGetHealthMax },
 		{ "GetRage", &UWaveAttributeComponent::execGetRage },
@@ -671,6 +715,10 @@ struct Z_Construct_UClass_UWaveAttributeComponent_Statics
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Custom" },
 		{ "IncludePath", "ActionSystem/WaveAttributeComponent.h" },
+		{ "ModuleRelativePath", "ActionSystem/WaveAttributeComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BaseDamage_MetaData[] = {
+		{ "Category", "Attributes" },
 		{ "ModuleRelativePath", "ActionSystem/WaveAttributeComponent.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Health_MetaData[] = {
@@ -698,6 +746,7 @@ struct Z_Construct_UClass_UWaveAttributeComponent_Statics
 		{ "ModuleRelativePath", "ActionSystem/WaveAttributeComponent.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_BaseDamage;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_Health;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_HealthMax;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_Rage;
@@ -710,9 +759,10 @@ struct Z_Construct_UClass_UWaveAttributeComponent_Statics
 		{ &Z_Construct_UFunction_UWaveAttributeComponent_ApplyHealthChange, "ApplyHealthChange" }, // 3800445363
 		{ &Z_Construct_UFunction_UWaveAttributeComponent_ApplyRage, "ApplyRage" }, // 1538016983
 		{ &Z_Construct_UFunction_UWaveAttributeComponent_GetAttributes, "GetAttributes" }, // 2880920471
+		{ &Z_Construct_UFunction_UWaveAttributeComponent_GetBaseDamage, "GetBaseDamage" }, // 913168499
 		{ &Z_Construct_UFunction_UWaveAttributeComponent_GetHealth, "GetHealth" }, // 1194356221
 		{ &Z_Construct_UFunction_UWaveAttributeComponent_GetHealthMax, "GetHealthMax" }, // 1490449512
-		{ &Z_Construct_UFunction_UWaveAttributeComponent_GetRage, "GetRage" }, // 1052394632
+		{ &Z_Construct_UFunction_UWaveAttributeComponent_GetRage, "GetRage" }, // 1957342478
 		{ &Z_Construct_UFunction_UWaveAttributeComponent_IsAlive, "IsAlive" }, // 1444266098
 		{ &Z_Construct_UFunction_UWaveAttributeComponent_IsFullHealth, "IsFullHealth" }, // 151192606
 		{ &Z_Construct_UFunction_UWaveAttributeComponent_Kill, "Kill" }, // 1483940094
@@ -725,6 +775,7 @@ struct Z_Construct_UClass_UWaveAttributeComponent_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UWaveAttributeComponent_Statics::NewProp_BaseDamage = { "BaseDamage", nullptr, (EPropertyFlags)0x0020080000010035, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWaveAttributeComponent, BaseDamage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BaseDamage_MetaData), NewProp_BaseDamage_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UWaveAttributeComponent_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0020080000010035, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWaveAttributeComponent, Health), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Health_MetaData), NewProp_Health_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UWaveAttributeComponent_Statics::NewProp_HealthMax = { "HealthMax", nullptr, (EPropertyFlags)0x0020080000010035, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWaveAttributeComponent, HealthMax), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HealthMax_MetaData), NewProp_HealthMax_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UWaveAttributeComponent_Statics::NewProp_Rage = { "Rage", nullptr, (EPropertyFlags)0x0020080000010035, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWaveAttributeComponent, Rage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Rage_MetaData), NewProp_Rage_MetaData) };
@@ -732,6 +783,7 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UWaveAttributeC
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UWaveAttributeComponent_Statics::NewProp_OnHealthChanged = { "OnHealthChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWaveAttributeComponent, OnHealthChanged), Z_Construct_UDelegateFunction_WaveSurvival_OnAttributeChanged__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnHealthChanged_MetaData), NewProp_OnHealthChanged_MetaData) }; // 1723944188
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UWaveAttributeComponent_Statics::NewProp_OnRageChanged = { "OnRageChanged", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWaveAttributeComponent, OnRageChanged), Z_Construct_UDelegateFunction_WaveSurvival_OnAttributeChanged__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnRageChanged_MetaData), NewProp_OnRageChanged_MetaData) }; // 1723944188
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWaveAttributeComponent_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWaveAttributeComponent_Statics::NewProp_BaseDamage,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWaveAttributeComponent_Statics::NewProp_Health,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWaveAttributeComponent_Statics::NewProp_HealthMax,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWaveAttributeComponent_Statics::NewProp_Rage,
@@ -774,11 +826,13 @@ template<> WAVESURVIVAL_API UClass* StaticClass<UWaveAttributeComponent>()
 }
 void UWaveAttributeComponent::ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const
 {
+	static const FName Name_BaseDamage(TEXT("BaseDamage"));
 	static const FName Name_Health(TEXT("Health"));
 	static const FName Name_HealthMax(TEXT("HealthMax"));
 	static const FName Name_Rage(TEXT("Rage"));
 	static const FName Name_RageMax(TEXT("RageMax"));
 	const bool bIsValid = true
+		&& Name_BaseDamage == ClassReps[(int32)ENetFields_Private::BaseDamage].Property->GetFName()
 		&& Name_Health == ClassReps[(int32)ENetFields_Private::Health].Property->GetFName()
 		&& Name_HealthMax == ClassReps[(int32)ENetFields_Private::HealthMax].Property->GetFName()
 		&& Name_Rage == ClassReps[(int32)ENetFields_Private::Rage].Property->GetFName()
@@ -793,10 +847,10 @@ UWaveAttributeComponent::~UWaveAttributeComponent() {}
 struct Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveAttributeComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWaveAttributeComponent, UWaveAttributeComponent::StaticClass, TEXT("UWaveAttributeComponent"), &Z_Registration_Info_UClass_UWaveAttributeComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWaveAttributeComponent), 3566106894U) },
+		{ Z_Construct_UClass_UWaveAttributeComponent, UWaveAttributeComponent::StaticClass, TEXT("UWaveAttributeComponent"), &Z_Registration_Info_UClass_UWaveAttributeComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWaveAttributeComponent), 518787400U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveAttributeComponent_h_1929598182(TEXT("/Script/WaveSurvival"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveAttributeComponent_h_162731068(TEXT("/Script/WaveSurvival"),
 	Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveAttributeComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_ActionSystem_WaveAttributeComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

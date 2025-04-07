@@ -20,7 +20,7 @@ UWaveAction_HitScanAttack::UWaveAction_HitScanAttack()
 	SweepRadius = 20.0f;
 	HitScanLength = 5000.0f;
 	
-	DamageAmount = 50.0f;
+	DamageMultiplier = 0.8f;
 }
 
 void UWaveAction_HitScanAttack::StartAction_Implementation(AActor* Instigator)
@@ -110,7 +110,7 @@ void UWaveAction_HitScanAttack::AttackDelay_Elapsed(AWavePlayerCharacter* Instig
 	
 	if (HitScanData.HitActor && HitScanData.HitActor->GetComponentByClass(UWaveAttributeComponent::StaticClass()))
 	{
-		UWaveGameplayFunctionLibrary::ApplyDamage(InstigatorCharacter, HitScanData.HitActor, DamageAmount);
+		UWaveGameplayFunctionLibrary::ApplyDamage(InstigatorCharacter, HitScanData.HitActor, DamageMultiplier);
 	}
 
 	InstigatorCharacter->SpawnHitScanEffects(this, HitScanData);

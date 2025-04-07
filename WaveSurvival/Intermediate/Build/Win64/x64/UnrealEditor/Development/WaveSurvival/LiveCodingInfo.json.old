@@ -25,7 +25,6 @@
 			"WaveActionEffect.cpp.obj",
 			"WaveAction_HitScanAttack.cpp.obj",
 			"WaveAction_ProjectileAttack.cpp.obj",
-			"WaveAttributeComponent.cpp.obj",
 			"WaveAnimInstance.cpp.obj",
 			"WaveGameModeBase.cpp.obj",
 			"WaveGameplayFunctionLibrary.cpp.obj",
@@ -38,7 +37,8 @@
 			"WaveProjectile_Magic.cpp.obj",
 			"SharedGameplayTags.cpp.obj",
 			"WaveWorldUserWidget.cpp.obj",
-			"WaveSurvival.cpp.obj"
+			"WaveSurvival.cpp.obj",
+			"WaveAttributeComponent.cpp.obj"
 		]
 	}
 }

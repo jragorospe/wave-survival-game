@@ -5,21 +5,25 @@
 #include "WaveSurvival/ActionSystem/WaveAttributeComponent.h"
 
 
-bool UWaveGameplayFunctionLibrary::ApplyDamage(AActor* DamageCauser, AActor* TargetActor, float DamageAmount)
+bool UWaveGameplayFunctionLibrary::ApplyDamage(AActor* DamageCauser, AActor* TargetActor, float DamageMultiplier)
 {
-	UWaveAttributeComponent* const AttributeComp = UWaveAttributeComponent::GetAttributes(TargetActor);
-	if (AttributeComp == nullptr)
+	UWaveAttributeComponent* const TargetComp = UWaveAttributeComponent::GetAttributes(TargetActor);
+	if (TargetComp == nullptr)
 	{
 		return false;
 	}
-	
-	if (AttributeComp->ApplyHealthChange(DamageCauser, -DamageAmount))
+
+	UWaveAttributeComponent* const AttackerComp = UWaveAttributeComponent::GetAttributes(DamageCauser);
+	if (AttackerComp == nullptr)
 	{
-		if (UWaveAttributeComponent* const AttackerComp = UWaveAttributeComponent::GetAttributes(DamageCauser))
-		{
-			const float RageAmount = DamageAmount / 3;
-			AttackerComp->ApplyRage(DamageCauser, RageAmount);
-		}
+		return false;
+	}
+
+	const float DamageAmount = DamageMultiplier * AttackerComp->GetBaseDamage();
+	if (TargetComp->ApplyHealthChange(DamageCauser, -DamageAmount))
+	{
+		const float RageAmount = DamageAmount / 3;
+		AttackerComp->ApplyRage(DamageCauser, RageAmount);
 
 		return true;
 	}
@@ -27,9 +31,9 @@ bool UWaveGameplayFunctionLibrary::ApplyDamage(AActor* DamageCauser, AActor* Tar
 	return false;
 }
 
-bool UWaveGameplayFunctionLibrary::ApplyDirectionalDamage(AActor* DamageCauser, AActor* TargetActor, float DamageAmount, const FHitResult& HitResult)
+bool UWaveGameplayFunctionLibrary::ApplyDirectionalDamage(AActor* DamageCauser, AActor* TargetActor, float DamageMultiplier, const FHitResult& HitResult)
 {
-	if (ApplyDamage(DamageCauser, TargetActor, DamageAmount))
+	if (ApplyDamage(DamageCauser, TargetActor, DamageMultiplier))
 	{
 		UPrimitiveComponent* const HitComp = HitResult.GetComponent();
 		if (HitComp && HitComp->IsSimulatingPhysics(HitResult.BoneName))

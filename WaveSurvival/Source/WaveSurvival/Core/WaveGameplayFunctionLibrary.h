@@ -16,8 +16,8 @@ class WAVESURVIVAL_API UWaveGameplayFunctionLibrary : public UBlueprintFunctionL
 
 public:
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
-	static bool ApplyDamage(AActor* DamageCauser, AActor* TargetActor, float DamageAmount);
+	static bool ApplyDamage(AActor* DamageCauser, AActor* TargetActor, float DamageMultiplier);
 
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
-	static bool ApplyDirectionalDamage(AActor* DamageCauser, AActor* TargetActor, float DamageAmount, const FHitResult& HitResult);
+	static bool ApplyDirectionalDamage(AActor* DamageCauser, AActor* TargetActor, float DamageMultiplier, const FHitResult& HitResult);
 };

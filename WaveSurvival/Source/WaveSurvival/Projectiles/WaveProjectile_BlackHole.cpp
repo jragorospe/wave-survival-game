@@ -23,7 +23,7 @@ AWaveProjectile_BlackHole::AWaveProjectile_BlackHole()
 	
 	MoveComp->InitialSpeed = 0.0f;
 
-	DamageAmount = 20.0f;
+	DamageMultiplier = 0.5f;
 	DamageInterval = 0.5f;
 }
 
@@ -74,5 +74,5 @@ void AWaveProjectile_BlackHole::OnActorOverlap(UPrimitiveComponent* OverlappedCo
 
 void AWaveProjectile_BlackHole::ApplyTickDamage(AActor* OtherActor) const
 {
-	UWaveGameplayFunctionLibrary::ApplyDamage(GetInstigator(), OtherActor, DamageAmount);
+	UWaveGameplayFunctionLibrary::ApplyDamage(GetInstigator(), OtherActor, DamageMultiplier);
 }

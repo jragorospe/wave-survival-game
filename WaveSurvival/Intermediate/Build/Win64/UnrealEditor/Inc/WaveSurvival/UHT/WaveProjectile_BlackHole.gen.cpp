@@ -173,7 +173,7 @@ struct Z_Construct_UClass_AWaveProjectile_BlackHole_Statics
 		{ "Category", "Damage" },
 		{ "ModuleRelativePath", "Projectiles/WaveProjectile_BlackHole.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DamageAmount_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DamageMultiplier_MetaData[] = {
 		{ "Category", "Damage" },
 		{ "ModuleRelativePath", "Projectiles/WaveProjectile_BlackHole.h" },
 	};
@@ -188,7 +188,7 @@ struct Z_Construct_UClass_AWaveProjectile_BlackHole_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_Radius;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageAmount;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageMultiplier;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageInterval;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DecalComp;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -204,12 +204,12 @@ struct Z_Construct_UClass_AWaveProjectile_BlackHole_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWaveProjectile_BlackHole_Statics::NewProp_Radius = { "Radius", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaveProjectile_BlackHole, Radius), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Radius_MetaData), NewProp_Radius_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWaveProjectile_BlackHole_Statics::NewProp_DamageAmount = { "DamageAmount", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaveProjectile_BlackHole, DamageAmount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamageAmount_MetaData), NewProp_DamageAmount_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWaveProjectile_BlackHole_Statics::NewProp_DamageMultiplier = { "DamageMultiplier", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaveProjectile_BlackHole, DamageMultiplier), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamageMultiplier_MetaData), NewProp_DamageMultiplier_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AWaveProjectile_BlackHole_Statics::NewProp_DamageInterval = { "DamageInterval", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaveProjectile_BlackHole, DamageInterval), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DamageInterval_MetaData), NewProp_DamageInterval_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWaveProjectile_BlackHole_Statics::NewProp_DecalComp = { "DecalComp", nullptr, (EPropertyFlags)0x01240800000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWaveProjectile_BlackHole, DecalComp), Z_Construct_UClass_UDecalComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DecalComp_MetaData), NewProp_DecalComp_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWaveProjectile_BlackHole_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaveProjectile_BlackHole_Statics::NewProp_Radius,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaveProjectile_BlackHole_Statics::NewProp_DamageAmount,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaveProjectile_BlackHole_Statics::NewProp_DamageMultiplier,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaveProjectile_BlackHole_Statics::NewProp_DamageInterval,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWaveProjectile_BlackHole_Statics::NewProp_DecalComp,
 };
@@ -254,10 +254,10 @@ AWaveProjectile_BlackHole::~AWaveProjectile_BlackHole() {}
 struct Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Projectiles_WaveProjectile_BlackHole_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWaveProjectile_BlackHole, AWaveProjectile_BlackHole::StaticClass, TEXT("AWaveProjectile_BlackHole"), &Z_Registration_Info_UClass_AWaveProjectile_BlackHole, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWaveProjectile_BlackHole), 1416031259U) },
+		{ Z_Construct_UClass_AWaveProjectile_BlackHole, AWaveProjectile_BlackHole::StaticClass, TEXT("AWaveProjectile_BlackHole"), &Z_Registration_Info_UClass_AWaveProjectile_BlackHole, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWaveProjectile_BlackHole), 2210215438U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Projectiles_WaveProjectile_BlackHole_h_221474185(TEXT("/Script/WaveSurvival"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Projectiles_WaveProjectile_BlackHole_h_3655078089(TEXT("/Script/WaveSurvival"),
 	Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Projectiles_WaveProjectile_BlackHole_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Projectiles_WaveProjectile_BlackHole_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

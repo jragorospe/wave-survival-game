@@ -26,7 +26,7 @@ struct Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics
 	{
 		AActor* DamageCauser;
 		AActor* TargetActor;
-		float DamageAmount;
+		float DamageMultiplier;
 		bool ReturnValue;
 	};
 #if WITH_METADATA
@@ -37,7 +37,7 @@ struct Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DamageCauser;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TargetActor;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageAmount;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageMultiplier;
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -45,7 +45,7 @@ struct Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics::NewProp_DamageCauser = { "DamageCauser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WaveGameplayFunctionLibrary_eventApplyDamage_Parms, DamageCauser), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics::NewProp_TargetActor = { "TargetActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WaveGameplayFunctionLibrary_eventApplyDamage_Parms, TargetActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics::NewProp_DamageAmount = { "DamageAmount", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WaveGameplayFunctionLibrary_eventApplyDamage_Parms, DamageAmount), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics::NewProp_DamageMultiplier = { "DamageMultiplier", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WaveGameplayFunctionLibrary_eventApplyDamage_Parms, DamageMultiplier), METADATA_PARAMS(0, nullptr) };
 void Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
 	((WaveGameplayFunctionLibrary_eventApplyDamage_Parms*)Obj)->ReturnValue = 1;
@@ -54,7 +54,7 @@ const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UWaveGameplay
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics::NewProp_DamageCauser,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics::NewProp_TargetActor,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics::NewProp_DamageAmount,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics::NewProp_DamageMultiplier,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage_Statics::PropPointers) < 2048);
@@ -73,10 +73,10 @@ DEFINE_FUNCTION(UWaveGameplayFunctionLibrary::execApplyDamage)
 {
 	P_GET_OBJECT(AActor,Z_Param_DamageCauser);
 	P_GET_OBJECT(AActor,Z_Param_TargetActor);
-	P_GET_PROPERTY(FFloatProperty,Z_Param_DamageAmount);
+	P_GET_PROPERTY(FFloatProperty,Z_Param_DamageMultiplier);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(bool*)Z_Param__Result=UWaveGameplayFunctionLibrary::ApplyDamage(Z_Param_DamageCauser,Z_Param_TargetActor,Z_Param_DamageAmount);
+	*(bool*)Z_Param__Result=UWaveGameplayFunctionLibrary::ApplyDamage(Z_Param_DamageCauser,Z_Param_TargetActor,Z_Param_DamageMultiplier);
 	P_NATIVE_END;
 }
 // End Class UWaveGameplayFunctionLibrary Function ApplyDamage
@@ -88,7 +88,7 @@ struct Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage
 	{
 		AActor* DamageCauser;
 		AActor* TargetActor;
-		float DamageAmount;
+		float DamageMultiplier;
 		FHitResult HitResult;
 		bool ReturnValue;
 	};
@@ -103,7 +103,7 @@ struct Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DamageCauser;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TargetActor;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageAmount;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageMultiplier;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_HitResult;
 	static void NewProp_ReturnValue_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
@@ -112,7 +112,7 @@ struct Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage_Statics::NewProp_DamageCauser = { "DamageCauser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WaveGameplayFunctionLibrary_eventApplyDirectionalDamage_Parms, DamageCauser), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage_Statics::NewProp_TargetActor = { "TargetActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WaveGameplayFunctionLibrary_eventApplyDirectionalDamage_Parms, TargetActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage_Statics::NewProp_DamageAmount = { "DamageAmount", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WaveGameplayFunctionLibrary_eventApplyDirectionalDamage_Parms, DamageAmount), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage_Statics::NewProp_DamageMultiplier = { "DamageMultiplier", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WaveGameplayFunctionLibrary_eventApplyDirectionalDamage_Parms, DamageMultiplier), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage_Statics::NewProp_HitResult = { "HitResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WaveGameplayFunctionLibrary_eventApplyDirectionalDamage_Parms, HitResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HitResult_MetaData), NewProp_HitResult_MetaData) }; // 4100991306
 void Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 {
@@ -122,7 +122,7 @@ const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UWaveGameplay
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage_Statics::NewProp_DamageCauser,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage_Statics::NewProp_TargetActor,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage_Statics::NewProp_DamageAmount,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage_Statics::NewProp_DamageMultiplier,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage_Statics::NewProp_HitResult,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage_Statics::NewProp_ReturnValue,
 };
@@ -142,11 +142,11 @@ DEFINE_FUNCTION(UWaveGameplayFunctionLibrary::execApplyDirectionalDamage)
 {
 	P_GET_OBJECT(AActor,Z_Param_DamageCauser);
 	P_GET_OBJECT(AActor,Z_Param_TargetActor);
-	P_GET_PROPERTY(FFloatProperty,Z_Param_DamageAmount);
+	P_GET_PROPERTY(FFloatProperty,Z_Param_DamageMultiplier);
 	P_GET_STRUCT_REF(FHitResult,Z_Param_Out_HitResult);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	*(bool*)Z_Param__Result=UWaveGameplayFunctionLibrary::ApplyDirectionalDamage(Z_Param_DamageCauser,Z_Param_TargetActor,Z_Param_DamageAmount,Z_Param_Out_HitResult);
+	*(bool*)Z_Param__Result=UWaveGameplayFunctionLibrary::ApplyDirectionalDamage(Z_Param_DamageCauser,Z_Param_TargetActor,Z_Param_DamageMultiplier,Z_Param_Out_HitResult);
 	P_NATIVE_END;
 }
 // End Class UWaveGameplayFunctionLibrary Function ApplyDirectionalDamage
@@ -179,8 +179,8 @@ struct Z_Construct_UClass_UWaveGameplayFunctionLibrary_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage, "ApplyDamage" }, // 2752355055
-		{ &Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage, "ApplyDirectionalDamage" }, // 3906926250
+		{ &Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage, "ApplyDamage" }, // 1437749321
+		{ &Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage, "ApplyDirectionalDamage" }, // 3985569926
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -229,10 +229,10 @@ UWaveGameplayFunctionLibrary::~UWaveGameplayFunctionLibrary() {}
 struct Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Core_WaveGameplayFunctionLibrary_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWaveGameplayFunctionLibrary, UWaveGameplayFunctionLibrary::StaticClass, TEXT("UWaveGameplayFunctionLibrary"), &Z_Registration_Info_UClass_UWaveGameplayFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWaveGameplayFunctionLibrary), 2404582971U) },
+		{ Z_Construct_UClass_UWaveGameplayFunctionLibrary, UWaveGameplayFunctionLibrary::StaticClass, TEXT("UWaveGameplayFunctionLibrary"), &Z_Registration_Info_UClass_UWaveGameplayFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWaveGameplayFunctionLibrary), 1769411150U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Core_WaveGameplayFunctionLibrary_h_2786106370(TEXT("/Script/WaveSurvival"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Core_WaveGameplayFunctionLibrary_h_2627925048(TEXT("/Script/WaveSurvival"),
 	Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Core_WaveGameplayFunctionLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Core_WaveGameplayFunctionLibrary_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

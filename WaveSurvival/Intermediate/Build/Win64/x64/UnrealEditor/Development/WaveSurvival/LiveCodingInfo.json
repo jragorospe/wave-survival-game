@@ -23,22 +23,22 @@
 			"WaveAction.cpp.obj",
 			"WaveActionComponent.cpp.obj",
 			"WaveActionEffect.cpp.obj",
-			"WaveAction_HitScanAttack.cpp.obj",
 			"WaveAction_ProjectileAttack.cpp.obj",
 			"WaveAnimInstance.cpp.obj",
 			"WaveGameModeBase.cpp.obj",
-			"WaveGameplayFunctionLibrary.cpp.obj",
 			"WaveGameplayInterface.cpp.obj",
 			"WaveInteractionComponent.cpp.obj",
 			"WavePlayerCharacter.cpp.obj",
 			"WaveProjectile.cpp.obj",
-			"WaveProjectile_BlackHole.cpp.obj",
 			"WaveProjectile_Dash.cpp.obj",
-			"WaveProjectile_Magic.cpp.obj",
 			"SharedGameplayTags.cpp.obj",
 			"WaveWorldUserWidget.cpp.obj",
 			"WaveSurvival.cpp.obj",
-			"WaveAttributeComponent.cpp.obj"
+			"WaveAction_HitScanAttack.cpp.obj",
+			"WaveAttributeComponent.cpp.obj",
+			"WaveGameplayFunctionLibrary.cpp.obj",
+			"WaveProjectile_BlackHole.cpp.obj",
+			"WaveProjectile_Magic.cpp.obj"
 		]
 	}
 }

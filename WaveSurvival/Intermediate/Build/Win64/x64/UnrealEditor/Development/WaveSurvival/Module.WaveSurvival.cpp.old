@@ -22,7 +22,6 @@
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/ActionSystem/WaveActionEffect.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/ActionSystem/WaveAction_HitScanAttack.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/ActionSystem/WaveAction_ProjectileAttack.cpp"
-#include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/ActionSystem/WaveAttributeComponent.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/Animation/WaveAnimInstance.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/Core/WaveGameModeBase.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/Core/WaveGameplayFunctionLibrary.cpp"
