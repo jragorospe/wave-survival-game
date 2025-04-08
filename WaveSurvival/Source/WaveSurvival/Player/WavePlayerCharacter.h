@@ -3,12 +3,15 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GenericTeamAgentInterface.h"
 #include "GameFramework/Character.h"
 #include "InputAction.h"
 #include "NiagaraCommon.h"
 #include "WaveSurvival/ActionSystem/WaveAction_HitScanAttack.h"
 #include "WavePlayerCharacter.generated.h"
 
+class UAIPerceptionStimuliSourceComponent;
+class AWaveAICharacter;
 class UWaveWorldUserWidget;
 class UWaveAction;
 class UInputMappingContext;
@@ -23,7 +26,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerAttack);
 
 
 UCLASS()
-class WAVESURVIVAL_API AWavePlayerCharacter : public ACharacter
+class WAVESURVIVAL_API AWavePlayerCharacter : public ACharacter, public IGenericTeamAgentInterface
 {
 	GENERATED_BODY()
 
@@ -81,8 +84,8 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	TObjectPtr<UWaveActionComponent> ActionComp;
 
-	// UPROPERTY(VisibleAnywhere)
-	// TObjectPtr<UAIPerceptionStimuliSourceComponent> PerceptionStimuliComp;
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<UAIPerceptionStimuliSourceComponent> PerceptionStimuliComp;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	TObjectPtr<UAudioComponent> AttackSoundsComp;
@@ -125,4 +128,8 @@ public:
 
 	UPROPERTY(BlueprintAssignable)
 	FOnPlayerAttack OnPlayerAttack;
+
+	// IGenericTeamAgentInterface BEGIN
+	virtual FGenericTeamId GetGenericTeamId() const override;
+	// IGenericTeamAgentInterface END
 };

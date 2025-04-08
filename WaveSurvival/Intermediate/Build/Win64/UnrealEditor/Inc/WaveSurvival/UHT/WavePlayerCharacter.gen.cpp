@@ -11,6 +11,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWavePlayerCharacter() {}
 
 // Begin Cross Module References
+AIMODULE_API UClass* Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_NoRegister();
+AIMODULE_API UClass* Z_Construct_UClass_UGenericTeamAgentInterface_NoRegister();
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
@@ -268,16 +270,15 @@ struct Z_Construct_UClass_AWavePlayerCharacter_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Player/WavePlayerCharacter.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AttackSoundsComp_MetaData[] = {
-		{ "Category", "Components" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// UPROPERTY(VisibleAnywhere)\n// TObjectPtr<UAIPerceptionStimuliSourceComponent> PerceptionStimuliComp;\n" },
-#endif
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PerceptionStimuliComp_MetaData[] = {
+		{ "Category", "WavePlayerCharacter" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Player/WavePlayerCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "UPROPERTY(VisibleAnywhere)\nTObjectPtr<UAIPerceptionStimuliSourceComponent> PerceptionStimuliComp;" },
-#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AttackSoundsComp_MetaData[] = {
+		{ "Category", "Components" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Player/WavePlayerCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HealthBarWidgetClass_MetaData[] = {
 		{ "Category", "UI" },
@@ -307,6 +308,7 @@ struct Z_Construct_UClass_AWavePlayerCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InteractionComp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AttributeComp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ActionComp;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PerceptionStimuliComp;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AttackSoundsComp;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_HealthBarWidgetClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ActiveHealthBar;
@@ -318,6 +320,7 @@ struct Z_Construct_UClass_AWavePlayerCharacter_Statics
 		{ &Z_Construct_UFunction_AWavePlayerCharacter_SpawnHitScanEffects, "SpawnHitScanEffects" }, // 2443190589
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
+	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AWavePlayerCharacter>::IsAbstract,
 	};
@@ -339,6 +342,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCha
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_InteractionComp = { "InteractionComp", nullptr, (EPropertyFlags)0x01240800000a0009, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, InteractionComp), Z_Construct_UClass_UWaveInteractionComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractionComp_MetaData), NewProp_InteractionComp_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_AttributeComp = { "AttributeComp", nullptr, (EPropertyFlags)0x01240800000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, AttributeComp), Z_Construct_UClass_UWaveAttributeComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttributeComp_MetaData), NewProp_AttributeComp_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_ActionComp = { "ActionComp", nullptr, (EPropertyFlags)0x01240800000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, ActionComp), Z_Construct_UClass_UWaveActionComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActionComp_MetaData), NewProp_ActionComp_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_PerceptionStimuliComp = { "PerceptionStimuliComp", nullptr, (EPropertyFlags)0x01240800000a0009, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, PerceptionStimuliComp), Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PerceptionStimuliComp_MetaData), NewProp_PerceptionStimuliComp_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_AttackSoundsComp = { "AttackSoundsComp", nullptr, (EPropertyFlags)0x01240800000a001d, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, AttackSoundsComp), Z_Construct_UClass_UAudioComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AttackSoundsComp_MetaData), NewProp_AttackSoundsComp_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_HealthBarWidgetClass = { "HealthBarWidgetClass", nullptr, (EPropertyFlags)0x0024080000010001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, HealthBarWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UWaveWorldUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HealthBarWidgetClass_MetaData), NewProp_HealthBarWidgetClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_ActiveHealthBar = { "ActiveHealthBar", nullptr, (EPropertyFlags)0x0124080000080008, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWavePlayerCharacter, ActiveHealthBar), Z_Construct_UClass_UWaveWorldUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ActiveHealthBar_MetaData), NewProp_ActiveHealthBar_MetaData) };
@@ -360,6 +364,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWavePlay
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_InteractionComp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_AttributeComp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_ActionComp,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_PerceptionStimuliComp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_AttackSoundsComp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_HealthBarWidgetClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWavePlayerCharacter_Statics::NewProp_ActiveHealthBar,
@@ -371,6 +376,9 @@ UObject* (*const Z_Construct_UClass_AWavePlayerCharacter_Statics::DependentSingl
 	(UObject* (*)())Z_Construct_UPackage__Script_WaveSurvival,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AWavePlayerCharacter_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AWavePlayerCharacter_Statics::InterfaceParams[] = {
+	{ Z_Construct_UClass_UGenericTeamAgentInterface_NoRegister, (int32)VTABLE_OFFSET(AWavePlayerCharacter, IGenericTeamAgentInterface), false },  // 1380835789
+};
 const UECodeGen_Private::FClassParams Z_Construct_UClass_AWavePlayerCharacter_Statics::ClassParams = {
 	&AWavePlayerCharacter::StaticClass,
 	"Game",
@@ -378,11 +386,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AWavePlayerCharacter_St
 	DependentSingletons,
 	FuncInfo,
 	Z_Construct_UClass_AWavePlayerCharacter_Statics::PropPointers,
-	nullptr,
+	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
 	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_AWavePlayerCharacter_Statics::PropPointers),
-	0,
+	UE_ARRAY_COUNT(InterfaceParams),
 	0x009000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWavePlayerCharacter_Statics::Class_MetaDataParams), Z_Construct_UClass_AWavePlayerCharacter_Statics::Class_MetaDataParams)
 };
@@ -406,10 +414,10 @@ AWavePlayerCharacter::~AWavePlayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Player_WavePlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWavePlayerCharacter, AWavePlayerCharacter::StaticClass, TEXT("AWavePlayerCharacter"), &Z_Registration_Info_UClass_AWavePlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWavePlayerCharacter), 3169336460U) },
+		{ Z_Construct_UClass_AWavePlayerCharacter, AWavePlayerCharacter::StaticClass, TEXT("AWavePlayerCharacter"), &Z_Registration_Info_UClass_AWavePlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWavePlayerCharacter), 4137766646U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Player_WavePlayerCharacter_h_92509535(TEXT("/Script/WaveSurvival"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Player_WavePlayerCharacter_h_8590511(TEXT("/Script/WaveSurvival"),
 	Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Player_WavePlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Player_WavePlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -70,6 +70,12 @@
     <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveActionEffect.h">
       <Filter>Source\WaveSurvival\ActionSystem</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveActionEffect_DamageBuff.cpp">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveActionEffect_DamageBuff.h">
+      <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\WaveSurvival\ActionSystem\WaveAction_HitScanAttack.cpp">
       <Filter>Source\WaveSurvival\ActionSystem</Filter>
     </ClCompile>
@@ -87,6 +93,21 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveAttributeComponent.h">
       <Filter>Source\WaveSurvival\ActionSystem</Filter>
+    </ClInclude>
+    <Filter Include="Source\WaveSurvival\AI">
+      <UniqueIdentifier>{2346E8E6-CA2F-3545-93E9-DEB03E08279D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveAICharacter.cpp">
+      <Filter>Source\WaveSurvival\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveAICharacter.h">
+      <Filter>Source\WaveSurvival\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveAIController.cpp">
+      <Filter>Source\WaveSurvival\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveAIController.h">
+      <Filter>Source\WaveSurvival\AI</Filter>
     </ClInclude>
     <Filter Include="Source\WaveSurvival\Animation">
       <UniqueIdentifier>{16141BF3-937A-36FF-AF2F-5E13B5A5B161}</UniqueIdentifier>
@@ -121,12 +142,6 @@
     <Filter Include="Source\WaveSurvival\Pickups">
       <UniqueIdentifier>{22C42356-1947-338F-9116-597B1D79B5AE}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\WaveSurvival\Pickups\WaveActionEffect_DoubleDamage.cpp">
-      <Filter>Source\WaveSurvival\Pickups</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\WaveSurvival\Pickups\WaveActionEffect_DoubleDamage.h">
-      <Filter>Source\WaveSurvival\Pickups</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\WaveSurvival\Pickups\WavePickupActor.cpp">
       <Filter>Source\WaveSurvival\Pickups</Filter>
     </ClCompile>

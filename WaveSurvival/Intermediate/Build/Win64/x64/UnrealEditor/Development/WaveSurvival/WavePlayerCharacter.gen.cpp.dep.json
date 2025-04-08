@@ -7,6 +7,8 @@
         "Includes": [
             "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\wavesurvival\\definitions.wavesurvival.h",
             "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\source\\wavesurvival\\player\\waveplayercharacter.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\genericteamagentinterface.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\uht\\genericteamagentinterface.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",

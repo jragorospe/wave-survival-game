@@ -40,15 +40,19 @@
 			"WavePickupActor_RagePotion.cpp.obj",
 			"WaveInteractionComponent.cpp.obj",
 			"WaveProjectile.cpp.obj",
-			"WaveProjectile_BlackHole.cpp.obj",
 			"WaveProjectile_Dash.cpp.obj",
 			"WaveProjectile_Magic.cpp.obj",
 			"SharedGameplayTags.cpp.obj",
+			"WaveWorldUserWidget.cpp.obj",
 			"WaveSurvival.cpp.obj",
+			"WaveAICharacter.gen.cpp.obj",
+			"WaveAIController.gen.cpp.obj",
 			"WavePlayerCharacter.gen.cpp.obj",
 			"WaveSurvival.init.gen.cpp.obj",
+			"WaveAICharacter.cpp.obj",
+			"WaveAIController.cpp.obj",
 			"WavePlayerCharacter.cpp.obj",
-			"WaveWorldUserWidget.cpp.obj"
+			"WaveProjectile_BlackHole.cpp.obj"
 		]
 	}
 }

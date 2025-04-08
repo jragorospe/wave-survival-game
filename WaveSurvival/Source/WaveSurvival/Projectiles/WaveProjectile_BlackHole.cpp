@@ -5,6 +5,7 @@
 
 #include "Components/DecalComponent.h"
 #include "Components/SphereComponent.h"
+#include "GameFramework/Character.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "WaveSurvival/Core/WaveGameplayFunctionLibrary.h"
@@ -25,6 +26,9 @@ AWaveProjectile_BlackHole::AWaveProjectile_BlackHole()
 
 	DamageMultiplier = 0.5f;
 	DamageInterval = 0.5f;
+	
+	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.TickInterval = DamageInterval;
 }
 
 void AWaveProjectile_BlackHole::BeginPlay()
@@ -39,8 +43,6 @@ void AWaveProjectile_BlackHole::BeginPlay()
 void AWaveProjectile_BlackHole::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
-
-	SphereComp->OnComponentBeginOverlap.AddDynamic(this, &AWaveProjectile_BlackHole::OnActorOverlap);
 }
 
 void AWaveProjectile_BlackHole::AdjustDecalLocationToSurface()
@@ -59,17 +61,21 @@ void AWaveProjectile_BlackHole::AdjustDecalLocationToSurface()
 	}
 }
 
-void AWaveProjectile_BlackHole::OnActorOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+void AWaveProjectile_BlackHole::Tick(float DeltaSeconds)
 {
-	if (!OtherActor || OtherActor == GetInstigator())
+	Super::Tick(DeltaSeconds);
+	
+	TArray<AActor*> OverlappingActors;
+	SphereComp->GetOverlappingActors(OverlappingActors, ACharacter::StaticClass());
+	for (AActor* Actor : OverlappingActors)
 	{
-		return;
-	}
+		if (Actor == nullptr || Actor == GetInstigator())
+		{
+			continue;
+		}
 
-	FTimerDelegate Delegate;
-	Delegate.BindUObject(this, &ThisClass::ApplyTickDamage, OtherActor);
-		
-	GetWorld()->GetTimerManager().SetTimer(DamageIntervalHandle, Delegate, DamageInterval, true);
+		ApplyTickDamage(Actor);
+	}
 }
 
 void AWaveProjectile_BlackHole::ApplyTickDamage(AActor* OtherActor) const

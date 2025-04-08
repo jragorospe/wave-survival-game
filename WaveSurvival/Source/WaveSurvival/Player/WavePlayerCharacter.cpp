@@ -11,6 +11,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "Perception/AIPerceptionStimuliSourceComponent.h"
 #include "WaveSurvival/SharedGameplayTags.h"
 #include "WaveSurvival/ActionSystem/WaveActionComponent.h"
 #include "WaveSurvival/ActionSystem/WaveAction_HitScanAttack.h"
@@ -36,7 +37,7 @@ AWavePlayerCharacter::AWavePlayerCharacter()
 
 	AttributeComp = CreateDefaultSubobject<UWaveAttributeComponent>("AttributeComp");
 
-	//PerceptionStimuliComp = CreateDefaultSubobject<UAIPerceptionStimuliSourceComponent>(TEXT("PerceptionStimuliComp"));
+	PerceptionStimuliComp = CreateDefaultSubobject<UAIPerceptionStimuliSourceComponent>(TEXT("PerceptionStimuliComp"));
 
 	AttackSoundsComp = CreateDefaultSubobject<UAudioComponent>(TEXT("AttackSoundsComp"));
 	AttackSoundsComp->SetupAttachment(RootComponent);
@@ -200,11 +201,18 @@ void AWavePlayerCharacter::OnHealthAttributeChanged(AActor* InstigatorActor, UWa
 		
 		SetLifeSpan(3.0f);
 		
+		PerceptionStimuliComp->UnregisterFromPerceptionSystem();
+		
 		APlayerController* PC = Cast<APlayerController>(GetController());
 		if (PC && PC->IsLocalController())
 		{
 			DisableInput(PC);
 		}
 	}
+}
+
+FGenericTeamId AWavePlayerCharacter::GetGenericTeamId() const
+{
+	return FGenericTeamId(0);
 }
 

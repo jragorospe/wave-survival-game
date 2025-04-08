@@ -19,7 +19,6 @@
 			"WavePickupActor_HealthPotion.gen.cpp.obj",
 			"WavePickupActor_RagePotion.gen.cpp.obj",
 			"WaveProjectile.gen.cpp.obj",
-			"WaveProjectile_BlackHole.gen.cpp.obj",
 			"WaveProjectile_Dash.gen.cpp.obj",
 			"WaveProjectile_Magic.gen.cpp.obj",
 			"WaveWorldUserWidget.gen.cpp.obj",
@@ -29,6 +28,7 @@
 			"WaveActionEffect_DamageBuff.cpp.obj",
 			"WaveAction_HitScanAttack.cpp.obj",
 			"WaveAction_ProjectileAttack.cpp.obj",
+			"WaveAttributeComponent.cpp.obj",
 			"WaveAnimInstance.cpp.obj",
 			"WaveGameModeBase.cpp.obj",
 			"WaveGameplayFunctionLibrary.cpp.obj",
@@ -39,16 +39,20 @@
 			"WavePickupActor_RagePotion.cpp.obj",
 			"WaveInteractionComponent.cpp.obj",
 			"WaveProjectile.cpp.obj",
-			"WaveProjectile_BlackHole.cpp.obj",
 			"WaveProjectile_Dash.cpp.obj",
 			"WaveProjectile_Magic.cpp.obj",
 			"SharedGameplayTags.cpp.obj",
+			"WaveWorldUserWidget.cpp.obj",
 			"WaveSurvival.cpp.obj",
+			"WaveAICharacter.gen.cpp.obj",
+			"WaveAIController.gen.cpp.obj",
 			"WavePlayerCharacter.gen.cpp.obj",
+			"WaveProjectile_BlackHole.gen.cpp.obj",
 			"WaveSurvival.init.gen.cpp.obj",
-			"WaveAttributeComponent.cpp.obj",
+			"WaveAICharacter.cpp.obj",
+			"WaveAIController.cpp.obj",
 			"WavePlayerCharacter.cpp.obj",
-			"WaveWorldUserWidget.cpp.obj"
+			"WaveProjectile_BlackHole.cpp.obj"
 		]
 	}
 }
