@@ -312,6 +312,14 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveBTService_CheckAttackRange.h"/>
+    <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveBTService_CheckHealth.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveBTService_CheckHealth.h"/>
+    <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveBTTask_HealSelf.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveBTTask_HealSelf.h"/>
     <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveBTTask_StartAction.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
