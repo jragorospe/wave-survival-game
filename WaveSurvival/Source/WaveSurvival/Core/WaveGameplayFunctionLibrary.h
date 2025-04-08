@@ -20,4 +20,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 	static bool ApplyDirectionalDamage(AActor* DamageCauser, AActor* TargetActor, float DamageMultiplier, const FHitResult& HitResult);
+
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+	static bool IsAlive(AActor* InActor);
 };

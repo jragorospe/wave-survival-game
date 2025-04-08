@@ -23,8 +23,10 @@ void AWaveAIController::BeginPlay()
 		RunBehaviorTree(BehaviorTree);
 	}
 	
-	UBlackboardComponent* BBComp = GetBlackboardComponent();
-	BBComp->SetValueAsObject("TargetActor", UGameplayStatics::GetPlayerPawn(this, 0));
+	if (UBlackboardComponent* BBComp = GetBlackboardComponent())
+	{
+		BBComp->SetValueAsObject("TargetActor", UGameplayStatics::GetPlayerPawn(this, 0));
+	}
 }
 
 

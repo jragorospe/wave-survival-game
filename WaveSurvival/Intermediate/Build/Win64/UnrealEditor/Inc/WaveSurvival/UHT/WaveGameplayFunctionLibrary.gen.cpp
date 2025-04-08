@@ -151,6 +151,58 @@ DEFINE_FUNCTION(UWaveGameplayFunctionLibrary::execApplyDirectionalDamage)
 }
 // End Class UWaveGameplayFunctionLibrary Function ApplyDirectionalDamage
 
+// Begin Class UWaveGameplayFunctionLibrary Function IsAlive
+struct Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics
+{
+	struct WaveGameplayFunctionLibrary_eventIsAlive_Parms
+	{
+		AActor* InActor;
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Gameplay" },
+		{ "ModuleRelativePath", "Core/WaveGameplayFunctionLibrary.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_InActor;
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::NewProp_InActor = { "InActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(WaveGameplayFunctionLibrary_eventIsAlive_Parms, InActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((WaveGameplayFunctionLibrary_eventIsAlive_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(WaveGameplayFunctionLibrary_eventIsAlive_Parms), &Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::NewProp_InActor,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UWaveGameplayFunctionLibrary, nullptr, "IsAlive", nullptr, nullptr, Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::WaveGameplayFunctionLibrary_eventIsAlive_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::WaveGameplayFunctionLibrary_eventIsAlive_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWaveGameplayFunctionLibrary::execIsAlive)
+{
+	P_GET_OBJECT(AActor,Z_Param_InActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=UWaveGameplayFunctionLibrary::IsAlive(Z_Param_InActor);
+	P_NATIVE_END;
+}
+// End Class UWaveGameplayFunctionLibrary Function IsAlive
+
 // Begin Class UWaveGameplayFunctionLibrary
 void UWaveGameplayFunctionLibrary::StaticRegisterNativesUWaveGameplayFunctionLibrary()
 {
@@ -158,6 +210,7 @@ void UWaveGameplayFunctionLibrary::StaticRegisterNativesUWaveGameplayFunctionLib
 	static const FNameNativePtrPair Funcs[] = {
 		{ "ApplyDamage", &UWaveGameplayFunctionLibrary::execApplyDamage },
 		{ "ApplyDirectionalDamage", &UWaveGameplayFunctionLibrary::execApplyDirectionalDamage },
+		{ "IsAlive", &UWaveGameplayFunctionLibrary::execIsAlive },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -181,6 +234,7 @@ struct Z_Construct_UClass_UWaveGameplayFunctionLibrary_Statics
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDamage, "ApplyDamage" }, // 1437749321
 		{ &Z_Construct_UFunction_UWaveGameplayFunctionLibrary_ApplyDirectionalDamage, "ApplyDirectionalDamage" }, // 3985569926
+		{ &Z_Construct_UFunction_UWaveGameplayFunctionLibrary_IsAlive, "IsAlive" }, // 2122922687
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -229,10 +283,10 @@ UWaveGameplayFunctionLibrary::~UWaveGameplayFunctionLibrary() {}
 struct Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Core_WaveGameplayFunctionLibrary_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWaveGameplayFunctionLibrary, UWaveGameplayFunctionLibrary::StaticClass, TEXT("UWaveGameplayFunctionLibrary"), &Z_Registration_Info_UClass_UWaveGameplayFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWaveGameplayFunctionLibrary), 1769411150U) },
+		{ Z_Construct_UClass_UWaveGameplayFunctionLibrary, UWaveGameplayFunctionLibrary::StaticClass, TEXT("UWaveGameplayFunctionLibrary"), &Z_Registration_Info_UClass_UWaveGameplayFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWaveGameplayFunctionLibrary), 3536590627U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Core_WaveGameplayFunctionLibrary_h_2627925048(TEXT("/Script/WaveSurvival"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Core_WaveGameplayFunctionLibrary_h_1265413570(TEXT("/Script/WaveSurvival"),
 	Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Core_WaveGameplayFunctionLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Core_WaveGameplayFunctionLibrary_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

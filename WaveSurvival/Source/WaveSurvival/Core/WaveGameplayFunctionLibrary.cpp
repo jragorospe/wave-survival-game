@@ -2,6 +2,8 @@
 
 
 #include "WaveGameplayFunctionLibrary.h"
+
+#include "WaveSurvival/ActionSystem/WaveActionComponent.h"
 #include "WaveSurvival/ActionSystem/WaveAttributeComponent.h"
 
 
@@ -45,6 +47,22 @@ bool UWaveGameplayFunctionLibrary::ApplyDirectionalDamage(AActor* DamageCauser, 
 		}
 
 		return true;
+	}
+
+	return false;
+}
+
+bool UWaveGameplayFunctionLibrary::IsAlive(AActor* InActor)
+{
+	if (!IsValid(InActor))
+	{
+		return false;
+	}
+
+	UWaveAttributeComponent* AttributeComp = InActor->FindComponentByClass<UWaveAttributeComponent>();
+	if (AttributeComp)
+	{
+		return AttributeComp->IsAlive();
 	}
 
 	return false;

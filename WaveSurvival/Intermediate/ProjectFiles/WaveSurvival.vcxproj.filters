@@ -97,6 +97,12 @@
     <Filter Include="Source\WaveSurvival\AI">
       <UniqueIdentifier>{2346E8E6-CA2F-3545-93E9-DEB03E08279D}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveAction_MinionRangedAttack.cpp">
+      <Filter>Source\WaveSurvival\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveAction_MinionRangedAttack.h">
+      <Filter>Source\WaveSurvival\AI</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveAICharacter.cpp">
       <Filter>Source\WaveSurvival\AI</Filter>
     </ClCompile>
@@ -107,6 +113,24 @@
       <Filter>Source\WaveSurvival\AI</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveAIController.h">
+      <Filter>Source\WaveSurvival\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveBTService_CheckAttackRange.cpp">
+      <Filter>Source\WaveSurvival\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveBTService_CheckAttackRange.h">
+      <Filter>Source\WaveSurvival\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveBTService_StartAction.cpp">
+      <Filter>Source\WaveSurvival\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveBTService_StartAction.h">
+      <Filter>Source\WaveSurvival\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveBTTask_StartAction.cpp">
+      <Filter>Source\WaveSurvival\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveBTTask_StartAction.h">
       <Filter>Source\WaveSurvival\AI</Filter>
     </ClInclude>
     <Filter Include="Source\WaveSurvival\Animation">

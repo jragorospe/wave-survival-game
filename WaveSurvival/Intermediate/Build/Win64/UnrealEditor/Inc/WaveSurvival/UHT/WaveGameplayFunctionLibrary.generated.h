@@ -17,6 +17,7 @@ struct FHitResult;
 #define WAVESURVIVAL_WaveGameplayFunctionLibrary_generated_h
 
 #define FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_Core_WaveGameplayFunctionLibrary_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execIsAlive); \
 	DECLARE_FUNCTION(execApplyDirectionalDamage); \
 	DECLARE_FUNCTION(execApplyDamage);
 

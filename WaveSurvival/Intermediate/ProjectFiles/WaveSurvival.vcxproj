@@ -296,6 +296,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\WaveSurvival\ActionSystem\WaveAttributeComponent.h"/>
+    <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveAction_MinionRangedAttack.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveAction_MinionRangedAttack.h"/>
     <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveAICharacter.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -304,6 +308,14 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveAIController.h"/>
+    <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveBTService_CheckAttackRange.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveBTService_CheckAttackRange.h"/>
+    <ClCompile Include="..\..\Source\WaveSurvival\AI\WaveBTTask_StartAction.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\AI\WaveBTTask_StartAction.h"/>
     <ClCompile Include="..\..\Source\WaveSurvival\Animation\WaveAnimInstance.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

@@ -18,7 +18,7 @@ UWaveAction_HitScanAttack::UWaveAction_HitScanAttack()
 	BulletTracerEffectInstance = nullptr;
 	
 	SweepRadius = 20.0f;
-	HitScanLength = 5000.0f;
+	HitScanLength = 7500.0f;
 	
 	DamageMultiplier = 0.8f;
 }
