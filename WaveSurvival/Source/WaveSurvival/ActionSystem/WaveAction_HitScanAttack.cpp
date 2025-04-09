@@ -20,7 +20,7 @@ UWaveAction_HitScanAttack::UWaveAction_HitScanAttack()
 	SweepRadius = 20.0f;
 	HitScanLength = 7500.0f;
 	
-	DamageMultiplier = 0.8f;
+	DamageMultiplier = 1.0f;
 }
 
 void UWaveAction_HitScanAttack::StartAction_Implementation(AActor* Instigator)

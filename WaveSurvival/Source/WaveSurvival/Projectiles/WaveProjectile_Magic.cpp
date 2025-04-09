@@ -11,7 +11,7 @@
 AWaveProjectile_Magic::AWaveProjectile_Magic()
 {
 	InitialLifeSpan = 10.0f;
-	DamageMultiplier = 1.0f;
+	DamageMultiplier = 0.8f;
 
 	DamagedActor = nullptr;
 }
@@ -37,7 +37,7 @@ void AWaveProjectile_Magic::OnActorOverlap(UPrimitiveComponent* OverlappedCompon
 		
 		Explode();
 
-		if (OtherActionComp && HasAuthority())
+		if (BurningEffectClass && OtherActionComp && HasAuthority())
 		{
 			OtherActionComp->AddAction(GetInstigator(), BurningEffectClass);
 		}

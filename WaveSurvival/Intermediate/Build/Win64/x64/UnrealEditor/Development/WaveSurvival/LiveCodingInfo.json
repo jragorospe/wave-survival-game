@@ -36,11 +36,11 @@
 			"WaveActionComponent.cpp.obj",
 			"WaveActionEffect.cpp.obj",
 			"WaveActionEffect_DamageBuff.cpp.obj",
-			"WaveAction_HitScanAttack.cpp.obj",
 			"WaveAction_ProjectileAttack.cpp.obj",
 			"WaveAttributeComponent.cpp.obj",
 			"WaveAction_MinionRangedAttack.cpp.obj",
 			"WaveAICharacter.cpp.obj",
+			"WaveAIController.cpp.obj",
 			"WaveBTService_CheckAttackRange.cpp.obj",
 			"WaveBTService_CheckHealth.cpp.obj",
 			"WaveBTTask_HealSelf.cpp.obj",
@@ -58,11 +58,11 @@
 			"WaveProjectile.cpp.obj",
 			"WaveProjectile_BlackHole.cpp.obj",
 			"WaveProjectile_Dash.cpp.obj",
-			"WaveProjectile_Magic.cpp.obj",
 			"SharedGameplayTags.cpp.obj",
 			"WaveWorldUserWidget.cpp.obj",
 			"WaveSurvival.cpp.obj",
-			"WaveAIController.cpp.obj"
+			"WaveAction_HitScanAttack.cpp.obj",
+			"WaveProjectile_Magic.cpp.obj"
 		]
 	}
 }
