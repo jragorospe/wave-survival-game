@@ -9,10 +9,16 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+struct FAIStimulus;
 #ifdef WAVESURVIVAL_WaveAIController_generated_h
 #error "WaveAIController.generated.h already included, missing '#pragma once' in WaveAIController.h"
 #endif
 #define WAVESURVIVAL_WaveAIController_generated_h
+
+#define FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_AI_WaveAIController_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnPerceptionUpdated);
+
 
 #define FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_AI_WaveAIController_h_21_INCLASS_NO_PURE_DECLS \
 private: \
@@ -39,6 +45,7 @@ public: \
 #define FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_AI_WaveAIController_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_AI_WaveAIController_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_AI_WaveAIController_h_21_INCLASS_NO_PURE_DECLS \
 	FID_Users_jrago_Documents_GitHub_WaveSurvival_WaveSurvival_Source_WaveSurvival_AI_WaveAIController_h_21_ENHANCED_CONSTRUCTORS \
 private: \

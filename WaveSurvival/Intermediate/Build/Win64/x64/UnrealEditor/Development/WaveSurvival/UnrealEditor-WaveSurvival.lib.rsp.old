@@ -10,6 +10,8 @@
 "C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\Module.WaveSurvival.cpp.obj"
 "C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveBTService_CheckHealth.cpp.obj"
 "C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveBTTask_HealSelf.cpp.obj"
+"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveBTService_CheckHealth.gen.cpp.obj"
+"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveBTTask_HealSelf.gen.cpp.obj"
 "C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveSurvival.init.gen.cpp.obj"
 "C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\Default.rc2.res"
 /OUT:"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\UnrealEditor-WaveSurvival.lib"

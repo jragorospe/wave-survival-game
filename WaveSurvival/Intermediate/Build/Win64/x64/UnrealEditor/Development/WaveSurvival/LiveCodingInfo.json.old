@@ -14,8 +14,6 @@
 			"WaveAnimInstance.gen.cpp.obj",
 			"WaveAttributeComponent.gen.cpp.obj",
 			"WaveBTService_CheckAttackRange.gen.cpp.obj",
-			"WaveBTService_CheckHealth.gen.cpp.obj",
-			"WaveBTTask_HealSelf.gen.cpp.obj",
 			"WaveBTTask_StartAction.gen.cpp.obj",
 			"WaveGameModeBase.gen.cpp.obj",
 			"WaveGameplayFunctionLibrary.gen.cpp.obj",
@@ -60,6 +58,8 @@
 			"SharedGameplayTags.cpp.obj",
 			"WaveWorldUserWidget.cpp.obj",
 			"WaveSurvival.cpp.obj",
+			"WaveBTService_CheckHealth.gen.cpp.obj",
+			"WaveBTTask_HealSelf.gen.cpp.obj",
 			"WaveSurvival.init.gen.cpp.obj",
 			"WaveBTService_CheckHealth.cpp.obj",
 			"WaveBTTask_HealSelf.cpp.obj"

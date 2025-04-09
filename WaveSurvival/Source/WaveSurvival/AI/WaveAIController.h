@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
-#include "BehaviorTree/Blackboard/BlackboardKey.h"
+#include "Perception/AIPerceptionTypes.h"
 #include "WaveAIController.generated.h"
 
 
@@ -26,6 +26,9 @@ protected:
 
 	UPROPERTY(VisibleAnywhere)
 	TObjectPtr<UAIPerceptionComponent> PerceptionComp;
+
+	UFUNCTION()
+	void OnPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus);
 
 	virtual void BeginPlay() override;
 

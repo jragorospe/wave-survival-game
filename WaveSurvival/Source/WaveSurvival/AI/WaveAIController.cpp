@@ -22,13 +22,14 @@ void AWaveAIController::BeginPlay()
 	{
 		RunBehaviorTree(BehaviorTree);
 	}
-	
-	if (UBlackboardComponent* BBComp = GetBlackboardComponent())
-	{
-		BBComp->SetValueAsObject("TargetActor", UGameplayStatics::GetPlayerPawn(this, 0));
-	}
+
+	PerceptionComp->OnTargetPerceptionUpdated.AddDynamic(this, &AWaveAIController::OnPerceptionUpdated);
 }
 
-
-
-
+void AWaveAIController::OnPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
+{
+	if (UBlackboardComponent* BBComp = GetBlackboardComponent())
+	{
+		BBComp->SetValueAsObject("TargetActor", Actor);
+	}
+}

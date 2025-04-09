@@ -11,8 +11,6 @@
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Intermediate/Build/Win64/UnrealEditor/Inc/WaveSurvival/UHT/WaveAnimInstance.gen.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Intermediate/Build/Win64/UnrealEditor/Inc/WaveSurvival/UHT/WaveAttributeComponent.gen.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Intermediate/Build/Win64/UnrealEditor/Inc/WaveSurvival/UHT/WaveBTService_CheckAttackRange.gen.cpp"
-#include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Intermediate/Build/Win64/UnrealEditor/Inc/WaveSurvival/UHT/WaveBTService_CheckHealth.gen.cpp"
-#include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Intermediate/Build/Win64/UnrealEditor/Inc/WaveSurvival/UHT/WaveBTTask_HealSelf.gen.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Intermediate/Build/Win64/UnrealEditor/Inc/WaveSurvival/UHT/WaveBTTask_StartAction.gen.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Intermediate/Build/Win64/UnrealEditor/Inc/WaveSurvival/UHT/WaveGameModeBase.gen.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Intermediate/Build/Win64/UnrealEditor/Inc/WaveSurvival/UHT/WaveGameplayFunctionLibrary.gen.cpp"

@@ -14,6 +14,8 @@
 			"WaveAnimInstance.gen.cpp.obj",
 			"WaveAttributeComponent.gen.cpp.obj",
 			"WaveBTService_CheckAttackRange.gen.cpp.obj",
+			"WaveBTService_CheckHealth.gen.cpp.obj",
+			"WaveBTTask_HealSelf.gen.cpp.obj",
 			"WaveBTTask_StartAction.gen.cpp.obj",
 			"WaveGameModeBase.gen.cpp.obj",
 			"WaveGameplayFunctionLibrary.gen.cpp.obj",
@@ -28,6 +30,7 @@
 			"WaveProjectile_BlackHole.gen.cpp.obj",
 			"WaveProjectile_Dash.gen.cpp.obj",
 			"WaveProjectile_Magic.gen.cpp.obj",
+			"WaveSurvival.init.gen.cpp.obj",
 			"WaveWorldUserWidget.gen.cpp.obj",
 			"WaveAction.cpp.obj",
 			"WaveActionComponent.cpp.obj",
@@ -38,8 +41,9 @@
 			"WaveAttributeComponent.cpp.obj",
 			"WaveAction_MinionRangedAttack.cpp.obj",
 			"WaveAICharacter.cpp.obj",
-			"WaveAIController.cpp.obj",
 			"WaveBTService_CheckAttackRange.cpp.obj",
+			"WaveBTService_CheckHealth.cpp.obj",
+			"WaveBTTask_HealSelf.cpp.obj",
 			"WaveBTTask_StartAction.cpp.obj",
 			"WaveAnimInstance.cpp.obj",
 			"WaveGameModeBase.cpp.obj",
@@ -58,11 +62,7 @@
 			"SharedGameplayTags.cpp.obj",
 			"WaveWorldUserWidget.cpp.obj",
 			"WaveSurvival.cpp.obj",
-			"WaveBTService_CheckHealth.gen.cpp.obj",
-			"WaveBTTask_HealSelf.gen.cpp.obj",
-			"WaveSurvival.init.gen.cpp.obj",
-			"WaveBTService_CheckHealth.cpp.obj",
-			"WaveBTTask_HealSelf.cpp.obj"
+			"WaveAIController.cpp.obj"
 		]
 	}
 }
