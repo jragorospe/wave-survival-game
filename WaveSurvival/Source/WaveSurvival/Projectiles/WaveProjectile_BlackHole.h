@@ -7,6 +7,9 @@
 #include "WaveProjectile_BlackHole.generated.h"
 
 
+class UWaveActionEffect;
+
+
 /**
  * 
  */

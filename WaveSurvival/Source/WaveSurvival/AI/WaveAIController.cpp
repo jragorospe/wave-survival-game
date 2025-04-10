@@ -7,6 +7,9 @@
 #include "Perception/AIPerceptionComponent.h"
 
 
+constexpr int32 ENEMY_TEAM_ID = 1;
+
+
 AWaveAIController::AWaveAIController()
 {
 	PerceptionComp = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("PerceptionComp"));
@@ -16,7 +19,7 @@ void AWaveAIController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	SetGenericTeamId(FGenericTeamId(1));
+	SetGenericTeamId(FGenericTeamId(ENEMY_TEAM_ID));
 
 	if (ensureMsgf(BehaviorTree, TEXT("Behavior Tree is nullptr! Please assign BehaviorTree in your AI Controller.")))
 	{
@@ -28,6 +31,12 @@ void AWaveAIController::BeginPlay()
 
 void AWaveAIController::OnPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
 {
+	const IGenericTeamAgentInterface* TeamAgent = Cast<const IGenericTeamAgentInterface>(Actor);
+	if (TeamAgent && TeamAgent->GetGenericTeamId() == GetGenericTeamId())
+	{
+		return;
+	}
+	
 	if (UBlackboardComponent* BBComp = GetBlackboardComponent())
 	{
 		BBComp->SetValueAsObject("TargetActor", Actor);

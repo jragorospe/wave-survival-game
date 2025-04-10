@@ -8,12 +8,14 @@
 #include "GameFramework/Character.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "WaveSurvival/ActionSystem/WaveActionEffect.h"
+#include "WaveSurvival/ActionSystem/WaveActionComponent.h"
 #include "WaveSurvival/Core/WaveGameplayFunctionLibrary.h"
 
 
 AWaveProjectile_BlackHole::AWaveProjectile_BlackHole()
 {
-	Radius = 600.0f;
+	Radius = 800.0f;
 	
 	SphereComp->SetSphereRadius(Radius);
 	

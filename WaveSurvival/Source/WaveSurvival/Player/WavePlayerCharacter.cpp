@@ -19,6 +19,9 @@
 #include "WaveSurvival/UI/WaveWorldUserWidget.h"
 
 
+constexpr int32 PLAYER_TEAM_ID = 0;
+
+
 AWavePlayerCharacter::AWavePlayerCharacter()
 {
 	PrimaryActorTick.bCanEverTick = true;
@@ -213,6 +216,6 @@ void AWavePlayerCharacter::OnHealthAttributeChanged(AActor* InstigatorActor, UWa
 
 FGenericTeamId AWavePlayerCharacter::GetGenericTeamId() const
 {
-	return FGenericTeamId(0);
+	return FGenericTeamId(PLAYER_TEAM_ID);
 }
 
