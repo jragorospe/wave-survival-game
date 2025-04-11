@@ -12,6 +12,16 @@ class AWaveAICharacter;
 class UEnvQuery;
 
 
+USTRUCT(BlueprintType)
+struct FMonsterInfoRow : public FTableRowBase
+{
+	GENERATED_BODY()
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FPrimaryAssetId MonsterId;
+};
+
+
 /**
  * 
  */
@@ -21,6 +31,9 @@ class WAVESURVIVAL_API AWaveGameModeBase : public AGameMode
 	GENERATED_BODY()
 
 protected:
+	UPROPERTY(EditDefaultsOnly, Category = "AI")
+	TObjectPtr<UDataTable> MonsterTable;
+	
 	UPROPERTY(EditDefaultsOnly, Category = "AI")
 	TObjectPtr<UEnvQuery> SpawnBotQuery;
 
@@ -44,7 +57,9 @@ protected:
 	
 	void SpawnBotTimerElapsed();
 	
-	void OnBotSpawnQueryCompleted(TSharedPtr<FEnvQueryResult> Result, TSubclassOf<AWaveAICharacter> InEnemyClass);
+	void OnBotSpawnQueryCompleted(TSharedPtr<FEnvQueryResult> Result, FMonsterInfoRow* InSelectedRow);
+
+	void OnMonsterLoaded(FPrimaryAssetId LoadedId, FVector SpawnLocation);
 
 public:
 	virtual void StartPlay() override;

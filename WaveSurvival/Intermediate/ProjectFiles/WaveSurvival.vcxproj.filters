@@ -19,6 +19,9 @@
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultEngine.ini">
       <Filter>Config</Filter>
     </None>
@@ -169,6 +172,12 @@
     <ClInclude Include="..\..\Source\WaveSurvival\Core\WaveGameplayInterface.h">
       <Filter>Source\WaveSurvival\Core</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\Core\WaveMonsterData.cpp">
+      <Filter>Source\WaveSurvival\Core</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Core\WaveMonsterData.h">
+      <Filter>Source\WaveSurvival\Core</Filter>
+    </ClInclude>
     <Filter Include="Source\WaveSurvival\Pickups">
       <UniqueIdentifier>{22C42356-1947-338F-9116-597B1D79B5AE}</UniqueIdentifier>
     </Filter>
@@ -209,6 +218,12 @@
       <Filter>Source\WaveSurvival\Player</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\WaveSurvival\Player\WavePlayerCharacter.h">
+      <Filter>Source\WaveSurvival\Player</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\WaveSurvival\Player\WavePlayerController.cpp">
+      <Filter>Source\WaveSurvival\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\WaveSurvival\Player\WavePlayerController.h">
       <Filter>Source\WaveSurvival\Player</Filter>
     </ClInclude>
     <Filter Include="Source\WaveSurvival\Projectiles">

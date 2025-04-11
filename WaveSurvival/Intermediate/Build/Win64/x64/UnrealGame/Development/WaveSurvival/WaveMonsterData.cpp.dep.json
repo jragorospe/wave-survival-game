@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\source\\wavesurvival\\core\\wavemonsterdata.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\x64\\wavesurvival\\development\\engine\\sharedpch.engine.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\x64\\unrealgame\\development\\wavesurvival\\definitions.wavesurvival.h",
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\source\\wavesurvival\\core\\wavemonsterdata.h",
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\unrealgame\\inc\\wavesurvival\\uht\\wavemonsterdata.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

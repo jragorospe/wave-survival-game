@@ -1,0 +1,35 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\unrealgame\\inc\\wavesurvival\\uht\\waveaicontroller.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\x64\\wavesurvival\\development\\engine\\sharedpch.engine.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\x64\\unrealgame\\development\\wavesurvival\\definitions.wavesurvival.h",
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\source\\wavesurvival\\ai\\waveaicontroller.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\aicontroller.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\aitypes.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\navigationsystem\\public\\navigationsystemtypes.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\navagentselector.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\navagentselector.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\aitypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\gameplaytasks\\classes\\gameplaytaskownerinterface.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\gameplaytasks\\public\\gameplaytasktypes.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\gameplaytasks\\uht\\gameplaytaskownerinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\gameplaytasks\\classes\\gameplaytask.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\gameplaytasks\\uht\\gameplaytask.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\perception\\aiperceptionlistenerinterface.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\aiperceptionlistenerinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\genericteamagentinterface.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\genericteamagentinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\public\\visuallogger\\visualloggerdebugsnapshotinterface.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\visualloggerdebugsnapshotinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\aicontroller.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\aimodule\\classes\\perception\\aiperceptiontypes.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\aimodule\\uht\\aiperceptiontypes.generated.h",
+            "c:\\users\\jrago\\documents\\github\\wavesurvival\\wavesurvival\\intermediate\\build\\win64\\unrealgame\\inc\\wavesurvival\\uht\\waveaicontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

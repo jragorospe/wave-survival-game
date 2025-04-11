@@ -38,7 +38,7 @@
 			"WaveAction_ProjectileAttack.cpp.obj",
 			"WaveAttributeComponent.cpp.obj",
 			"WaveAction_MinionRangedAttack.cpp.obj",
-			"WaveAICharacter.cpp.obj",
+			"WaveAIController.cpp.obj",
 			"WaveBTService_CheckAttackRange.cpp.obj",
 			"WaveBTService_CheckHealth.cpp.obj",
 			"WaveBTTask_HealSelf.cpp.obj",
@@ -51,18 +51,22 @@
 			"WavePickupActor_HealthPotion.cpp.obj",
 			"WavePickupActor_RagePotion.cpp.obj",
 			"WaveInteractionComponent.cpp.obj",
+			"WavePlayerCharacter.cpp.obj",
 			"WaveProjectile.cpp.obj",
+			"WaveProjectile_BlackHole.cpp.obj",
 			"WaveProjectile_Dash.cpp.obj",
 			"WaveProjectile_Magic.cpp.obj",
 			"SharedGameplayTags.cpp.obj",
 			"WaveWorldUserWidget.cpp.obj",
 			"WaveSurvival.cpp.obj",
 			"WaveGameModeBase.gen.cpp.obj",
+			"WaveMonsterData.gen.cpp.obj",
+			"WavePlayerController.gen.cpp.obj",
 			"WaveSurvival.init.gen.cpp.obj",
-			"WaveAIController.cpp.obj",
+			"WaveAICharacter.cpp.obj",
 			"WaveGameModeBase.cpp.obj",
-			"WavePlayerCharacter.cpp.obj",
-			"WaveProjectile_BlackHole.cpp.obj"
+			"WaveMonsterData.cpp.obj",
+			"WavePlayerController.cpp.obj"
 		]
 	}
 }

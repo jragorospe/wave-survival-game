@@ -13,6 +13,7 @@
 #include "Perception/AISense_Damage.h"
 #include "WaveSurvival/ActionSystem/WaveActionComponent.h"
 #include "WaveSurvival/ActionSystem/WaveAttributeComponent.h"
+#include "WaveSurvival/Core/WaveGameModeBase.h"
 #include "WaveSurvival/UI/WaveWorldUserWidget.h"
 
 

@@ -4,6 +4,7 @@
 #include "WaveGameModeBase.h"
 
 #include "EngineUtils.h"
+#include "WaveMonsterData.h"
 #include "Engine/AssetManager.h"
 #include "EnvironmentQuery/EnvQueryManager.h"
 #include "Logging/StructuredLog.h"
@@ -52,13 +53,24 @@ void AWaveGameModeBase::SpawnBotTimerElapsed()
 	{
 		return;
 	}
+	
+	if (!ensure(MonsterTable))
+	{
+		return;
+	}
+	
+	TArray<FMonsterInfoRow*> Rows;
+	MonsterTable->GetAllRows("", Rows);
+
+	const int32 RandomIndex = FMath::RandRange(0, Rows.Num() - 1);
+	FMonsterInfoRow* SelectedRow = Rows[RandomIndex]; 
 
 	FEnvQueryRequest Request(SpawnBotQuery, this);
-	FQueryFinishedSignature FinishedDelegate = FQueryFinishedSignature::CreateUObject(this, &AWaveGameModeBase::OnBotSpawnQueryCompleted, EnemyClass);
+	FQueryFinishedSignature FinishedDelegate = FQueryFinishedSignature::CreateUObject(this, &AWaveGameModeBase::OnBotSpawnQueryCompleted, SelectedRow);
 	Request.Execute(EEnvQueryRunMode::RandomBest5Pct, FinishedDelegate);
 }
 
-void AWaveGameModeBase::OnBotSpawnQueryCompleted(TSharedPtr<FEnvQueryResult> Result, TSubclassOf<AWaveAICharacter> InEnemyClass)
+void AWaveGameModeBase::OnBotSpawnQueryCompleted(TSharedPtr<FEnvQueryResult> Result, FMonsterInfoRow* InSelectedRow)
 {
 	FEnvQueryResult* QueryResult = Result.Get();
 	if (!QueryResult->IsSuccessful())
@@ -70,14 +82,33 @@ void AWaveGameModeBase::OnBotSpawnQueryCompleted(TSharedPtr<FEnvQueryResult> Res
 	TArray<FVector> Locations;
 	QueryResult->GetAllAsLocations(Locations);
 
-	if (Locations.IsValidIndex(0) && InEnemyClass)
+	if (Locations.IsValidIndex(0) && MonsterTable)
 	{
-		AActor* NewBot = GetWorld()->SpawnActor<AActor>(InEnemyClass, Locations[0], FRotator::ZeroRotator);
-		if (NewBot)
+		UAssetManager& Manager = UAssetManager::Get();
+
+		FPrimaryAssetId MonsterId = InSelectedRow->MonsterId;
+
+		TArray<FName> Bundles;
+		FStreamableDelegate Delegate = FStreamableDelegate::CreateUObject(this, &AWaveGameModeBase::OnMonsterLoaded, MonsterId, Locations[0]);
+		Manager.LoadPrimaryAsset(MonsterId, Bundles, Delegate);
+	}
+}
+
+void AWaveGameModeBase::OnMonsterLoaded(FPrimaryAssetId LoadedId, FVector SpawnLocation)
+{
+	UAssetManager& Manager = UAssetManager::Get();
+
+	UWaveMonsterData* MonsterData = CastChecked<UWaveMonsterData>(Manager.GetPrimaryAssetObject(LoadedId));
+	
+	AActor* NewBot = GetWorld()->SpawnActor<AActor>(MonsterData->MonsterClass, SpawnLocation, FRotator::ZeroRotator);
+	if (NewBot)
+	{
+		UWaveActionComponent* ActionComp = NewBot->FindComponentByClass<UWaveActionComponent>();
+		check(ActionComp);
+		
+		for (const TSubclassOf<UWaveAction> ActionClass : MonsterData->Actions)
 		{
-			// Grant special actions, buffs etc.
-			UWaveActionComponent* ActionComp = NewBot->FindComponentByClass<UWaveActionComponent>();
-			check(ActionComp);
+			ActionComp->AddAction(NewBot, ActionClass);
 		}
 	}
 }
