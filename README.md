@@ -24,7 +24,7 @@ Check out my video here showcasing its features: https://youtu.be/yH9ACc1ip28?fe
     * EQS for Spawning Enemies
     * DataTable to Hold Enemy Information
     * DataAssets to Hold Enemy Configurations
-* Optimation Implementations
+* Optimization Implementations
     * Async Loading of UI Icons
     * Async Loading of Enemy Data Assets
 * AI
