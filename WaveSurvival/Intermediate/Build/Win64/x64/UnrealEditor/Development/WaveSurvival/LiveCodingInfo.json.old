@@ -38,7 +38,6 @@
 			"WaveAction_ProjectileAttack.cpp.obj",
 			"WaveAttributeComponent.cpp.obj",
 			"WaveAction_MinionRangedAttack.cpp.obj",
-			"WaveAICharacter.cpp.obj",
 			"WaveAIController.cpp.obj",
 			"WaveBTService_CheckAttackRange.cpp.obj",
 			"WaveBTService_CheckHealth.cpp.obj",
@@ -64,6 +63,7 @@
 			"WaveMonsterData.gen.cpp.obj",
 			"WavePlayerController.gen.cpp.obj",
 			"WaveSurvival.init.gen.cpp.obj",
+			"WaveAICharacter.cpp.obj",
 			"WaveGameModeBase.cpp.obj",
 			"WaveMonsterData.cpp.obj",
 			"WavePlayerController.cpp.obj"

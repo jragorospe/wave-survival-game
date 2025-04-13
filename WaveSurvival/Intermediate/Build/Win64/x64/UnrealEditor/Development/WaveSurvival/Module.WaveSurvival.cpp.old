@@ -35,7 +35,6 @@
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/ActionSystem/WaveAction_ProjectileAttack.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/ActionSystem/WaveAttributeComponent.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/AI/WaveAction_MinionRangedAttack.cpp"
-#include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/AI/WaveAICharacter.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/AI/WaveAIController.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/AI/WaveBTService_CheckAttackRange.cpp"
 #include "C:/Users/jrago/Documents/GitHub/WaveSurvival/WaveSurvival/Source/WaveSurvival/AI/WaveBTService_CheckHealth.cpp"

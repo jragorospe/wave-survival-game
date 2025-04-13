@@ -8,13 +8,5 @@
 /NODEFAULTLIB
 "C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\WaveSurvivalEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\Module.WaveSurvival.cpp.obj"
-"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveAICharacter.cpp.obj"
-"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveGameModeBase.cpp.obj"
-"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveMonsterData.cpp.obj"
-"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WavePlayerController.cpp.obj"
-"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveGameModeBase.gen.cpp.obj"
-"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveMonsterData.gen.cpp.obj"
-"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WavePlayerController.gen.cpp.obj"
-"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\WaveSurvival.init.gen.cpp.obj"
 "C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\Default.rc2.res"
 /OUT:"C:\Users\jrago\Documents\GitHub\WaveSurvival\WaveSurvival\Intermediate\Build\Win64\x64\UnrealEditor\Development\WaveSurvival\UnrealEditor-WaveSurvival.lib"
