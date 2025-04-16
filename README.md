@@ -2,7 +2,7 @@
 This multiplayer framework was built from a blank Unreal Engine project, incorporating systems and techniques I learned from Unreal educators like Tom Looman and Stephen Ulibarri, and Epic Games' sample projects. I’ll be using this repository as a sandbox to experiment with new mechanics and systems and showcase my learning.
 
 # Video
-Check out my video here showcasing its features: https://youtu.be/yH9ACc1ip28?feature=shared
+[Check out my video here showcasing its features](https://youtu.be/yH9ACc1ip28?feature=shared)
 
 # Project Features
 * Third-person Action Character Movement
@@ -42,4 +42,4 @@ Check out my video here showcasing its features: https://youtu.be/yH9ACc1ip28?fe
     * Backstab Assassinate Showcasing Action Stations
  
 # Download
-Download the latest build here: https://drive.google.com/file/d/19Svjr2gV0Go9Vp2klUw6cs0uDIy5IUPk/view?usp=sharing.
+[Download the latest build here](https://drive.google.com/file/d/19Svjr2gV0Go9Vp2klUw6cs0uDIy5IUPk/view?usp=sharing)
