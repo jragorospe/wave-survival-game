@@ -1,45 +1,54 @@
 # Wave Survival Game
-This multiplayer framework was built from a blank Unreal Engine project, incorporating systems and techniques I learned from Unreal educators like Tom Looman and Stephen Ulibarri, and Epic Games' sample projects. I’ll be using this repository as a sandbox to experiment with new mechanics and systems and showcase my learning.
+**A scalable third-person multiplayer shooter framework for Unreal Engine 5, featuring action abilities, attribute systems, AI, and robust multiplayer support.**
+> [Video Showcase](https://youtu.be/yH9ACc1ip28?feature=shared)
 
-# Video
-[Check out my video here showcasing its features](https://youtu.be/yH9ACc1ip28?feature=shared)
-
-# Project Features
-* Third-person Action Character Movement
-* Enhanced Input
-* Interaction Component
-* Action System + Attribute Component (similar to Unreal's Gameplay Ability System)
-    * Hitscan Attack
-    * Projectile Attack (with burning damage-over-time effect and splash damage)
-    * Blackhole Attack (with tick damage and radius decal)
-    * Teleport Ability
-    * Health Attribute
-    * Rage Attribute (to use Teleport and Blackhole abilities)
-    * Damage Buff
-* Event Driven UI
-* C++ Framework with Blueprint Layer for Asset Assignment
-* GameplayTags to Grant/Block Actions
-* Full Multiplayer Support
-* GameMode Logic
-    * EQS for Spawning Enemies
-    * DataTable to Hold Enemy Information
-    * DataAssets to Hold Enemy Configurations
-* Optimization Implementations
-    * Async Loading of UI Icons
-    * Async Loading of Enemy Data Assets
-* AI
-    * Minion AI with Behavior Trees (Roam, Sight Sense, Chase, Attack, Flee and Heal)
-    * C++ Custom Behavior Tree Nodes (BT Tasks and Services)
-    * EQS for Attack/Cover Locations
-* Powerup Pickups (Grant Health, Rage, Double Damage) 
-* UI (UMG)
-    * Main Menu to Start a Standalone Game or Host/Join a Game
-    * Scalable World Widgets (Display Health, Effects, Interaction Text) 
-* WIP
-    * Object Pooling Subsystem (Projectiles/Enemies)
-    * Targetting Ability for Blackhole Attack (Featured in Lyra Sample Game)
-    * Melee Enemy Utilizing Anim Notifies and Sphere Traces
-    * Backstab Assassinate Showcasing Action Stations
+## Features
+- **Third-Person Action Gameplay:** Responsive character movement and camera control.
+- **Enhanced Input System:** Modern Unreal input mapping and handling.
+- **Action System + Attribute Component:** Flexible abilities, inspired by Gameplay Ability System (GAS).
+- **Abilities:** Hitscan, projectile (with burning/splash), blackhole (AoE tick damage), teleport, buffs, powerups, and targeting.
+- **Attribute Management:** Health, Rage, buffs, damage-over-time, and event-driven UI feedback.
+- **GameplayTags:** Grant/Block actions dynamically.
+- **Multiplayer Support:** Fully networked gameplay, replication-ready.
+- **AI:** Minion enemies with custom behavior trees, EQS-based location selection, custom C++ BT nodes, flee/heal, and targeting.
+- **Enemy System:** DataTable and DataAssets drive configuration and scaling.
+- **Framework Architecture:** Modular C++ code with Blueprint-friendly layers for designers.
+- **UI:** Main menu, lobbies, in-game UMG widgets, scalable world HUD, health/effect displays.
+- **Optimization:** Async loading for UI and enemy asset data, performance-minded subsystems.
+- **Powerups:** Health, rage, damage buffs; pickups with game impact.
+- **WIP:** Object pooling subsystem for performance, advanced targeting, backstab/assassinate mechanics, and melee enemy prototypes.
  
-# Download
-[Download the latest build here](https://drive.google.com/file/d/19Svjr2gV0Go9Vp2klUw6cs0uDIy5IUPk/view?usp=sharing)
+## How to Play
+Survive waves of enemies using your abilities and buffs. Team up for multiplayer coop and manage your resources to defeat increasingly tough waves of minions.
+
+## Installation
+1. **Clone the Repository:**
+`git clone https://github.com/jragorospe/wave-survival-game.git`
+2. **Open in Unreal Engine:**  
+- Use Unreal Engine 5 (version 5.x+ recommended).  
+- Open the project `.uproject` file.
+3. **Build and Run:**  
+- Compile C++ code (regenerate project files if needed).  
+- Click "Play" in the UE5 editor or package for your platform.
+
+## Controls
+- **Movement:** WASD  
+- **Projectile Attack:** Left Mouse Click
+- **Hitscan Attack:** Right Mouse Click
+- **Blackhole Attack** Middle Mouse Click
+- **Teleport** F
+- **Interact:** E  
+- **Pause/Menu:** Esc
+
+## Tech Stack
+- Unreal Engine 5 (C++ & Blueprints)  
+- Enhanced Input System  
+- Modular Action System (Similar to GAS) 
+- GameplayTags  
+- Behavior Trees and AI EQS  
+- UMG (UI Framework)
+
+## Credits
+- Inspired by Unreal community tutorials from Tom Looman, Stephen Ulibarri, and Epic Games sample projects.  
+- Original code, systems, and design by Joseph Gorospe.  
+- Assets and sound effects provided by Tom Looman.
