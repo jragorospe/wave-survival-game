@@ -1,5 +1,7 @@
 # Wave Survival Game
 **A scalable third-person multiplayer shooter framework for Unreal Engine 5, featuring action abilities, attribute systems, AI, and robust multiplayer support.**
+
+<img width="1280" height="661" alt="Wave Survival Game Screenshot" src="https://github.com/user-attachments/assets/02271373-68d8-4d26-8521-0e14cad5c7f2" />
 > [Video Showcase](https://youtu.be/yH9ACc1ip28?feature=shared)
 
 ## Features
